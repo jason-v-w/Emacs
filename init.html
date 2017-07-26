@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Emacs Org Init File</title>
+<!-- 2017-07-18 Tue 22:29 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Jason Vander Woude" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="init.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Emacs Org Init File</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Path Setup</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Lisp</a></li>
+<li><a href="#sec-1-2">1.2. Themes</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. General Settings</a></li>
+<li><a href="#sec-3">3. Other Initialization</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Org Theme</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Preinstalled</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Org Mode</a>
+<ul>
+<li><a href="#sec-4-1-1">4.1.1. Add Templates</a></li>
+<li><a href="#sec-4-1-2">4.1.2. Set Code Font Effects</a></li>
+<li><a href="#sec-4-1-3">4.1.3. Add Drawers</a></li>
+<li><a href="#sec-4-1-4">4.1.4. Set Babel Languages</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-2">4.2. Highlight Line</a></li>
+<li><a href="#sec-4-3">4.3. Ido</a></li>
+<li><a href="#sec-4-4">4.4. Line Numbers</a></li>
+<li><a href="#sec-4-5">4.5. Column Numbers</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Installs</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Package Setup</a></li>
+<li><a href="#sec-5-2">5.2. Melpa</a>
+<ul>
+<li><a href="#sec-5-2-1">5.2.1. Multiple Cursors</a></li>
+<li><a href="#sec-5-2-2">5.2.2. Magit</a></li>
+<li><a href="#sec-5-2-3">5.2.3. Auto Complete</a></li>
+<li><a href="#sec-5-2-4">5.2.4. Ess</a></li>
+<li><a href="#sec-5-2-5">5.2.5. Tramp</a></li>
+<li><a href="#sec-5-2-6">5.2.6. Evil Numbers</a></li>
+<li><a href="#sec-5-2-7">5.2.7. CSV</a></li>
+<li><a href="#sec-5-2-8">5.2.8. Icicles</a></li>
+<li><a href="#sec-5-2-9">5.2.9. YASnippet</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-3">5.3. Manual</a>
+<ul>
+<li><a href="#sec-5-3-1">5.3.1. M2</a></li>
+<li><a href="#sec-5-3-2">5.3.2. Window Number</a></li>
+<li><a href="#sec-5-3-3">5.3.3. Ace Jump</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-6">6. My Functions</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Return Key Functionality</a></li>
+<li><a href="#sec-6-2">6.2. Save Macros as Functions</a></li>
+<li><a href="#sec-6-3">6.3. Transparency</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Global Key Bindings</a>
+<ul>
+<li><a href="#sec-7-1">7.1. Window Movement</a></li>
+<li><a href="#sec-7-2">7.2. Mutliple Cursors</a></li>
+<li><a href="#sec-7-3">7.3. Magit</a></li>
+<li><a href="#sec-7-4">7.4. Ace Jump</a></li>
+<li><a href="#sec-7-5">7.5. Move Backward Key Swap</a></li>
+<li><a href="#sec-7-6">7.6. Evil Numbers</a></li>
+<li><a href="#sec-7-7">7.7. Helm</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8. Final Calls</a></li>
+<li><a href="#sec-9">9. Not Executed</a>
+<ul>
+<li><a href="#sec-9-1">9.1. Code Completion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Path Setup</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Lisp</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(add-to-list 'load-path "~/.emacs.d/lisp/")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Themes</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Add all subdirectories of ~/.emacs.d/themes/ to the custom-theme-load-path
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(let ((basedir "~/.emacs.d/themes/"))
+      (dolist (f (directory-files basedir))
+	(if (and (not (or (equal f ".") (equal f "..")))
+		 (file-directory-p (concat basedir f)))
+	    (add-to-list 'custom-theme-load-path (concat basedir f)))))
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> General Settings</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(load-theme `wombat)
+;;(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq frame-title-format "Emacs")
+(setq inhibit-splash-screen t)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Other Initialization</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Org Theme</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+This has to be before requiring Org
+This source is influence by <a href="http://orgmode.org/worg/org-contrib/babel/examples/fontify-src-code-blocks.html">this orgmode.org post</a> and this <a href="https://emacs.stackexchange.com/questions/14824/org-block-background-font-not-having-effect/14886">StackExchange post</a>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(set-face-attribute 'org-block-begin-line nil :background "#555" :foreground "#000" :underline "000")
+(set-face-attribute 'org-block-end-line nil :background "#555" :foreground "#000" :overline "000")
+(set-face-attribute 'org-block-background nil :background "#666")
+
+;; (defface org-block-begin-line
+;;   '((t (:underline "#FFF" :foreground "#999" :background "#050505")))
+;;   "Face used for the line delimiting the begin of source blocks.")
+;; (defface org-block-background
+;;   '((t (:background "#AAA")))
+;;   "Face used for the source block background.")
+;; (defface org-block-end-line
+;;   '((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
+;;   "Face used for the line delimiting the end of source blocks.")
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Preinstalled</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Org Mode</h3>
+<div class="outline-text-3" id="text-4-1">
+</div><div id="outline-container-sec-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1"><span class="section-number-4">4.1.1</span> Add Templates</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+Add an elisp template bound to <i>&lt;m + TAB</i>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(add-to-list 'org-structure-template-alist
+	     '("m" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC" "&lt;src lang=\"?\"&gt;\n\n&lt;/src&gt;"))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-2" class="outline-4">
+<h4 id="sec-4-1-2"><span class="section-number-4">4.1.2</span> Set Code Font Effects</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+Set coloring of elisp blocks
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">;;   (require 'color)
+;; 
+;;   (set-face-attribute 'org-block nil :background
+;;                       (color-darken-name
+;;                        (face-attribute 'default :background) 3))
+;; 
+;;   (setq org-src-block-faces '(("emacs-lisp" (:background "#EEE2FF"))
+;;                               ("python" (:background "#E5FFB8"))))
+
+  (setq org-src-fontify-natively t)
+;;   (org-block-begin-line
+;;     ((t (:underline "#F00" :foreground "#0F0" :background "#00F"))))
+;;   (org-block-background
+;;     ((t (:background "#F0F"))))
+;;   (org-block-end-line
+;;     ((t (:underline "#0F0" :foreground "#00F" :background "#F00"))))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-3" class="outline-4">
+<h4 id="sec-4-1-3"><span class="section-number-4">4.1.3</span> Add Drawers</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(add-to-list 'org-drawers "FUTURE")
+(add-to-list 'org-drawers "META")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-4" class="outline-4">
+<h4 id="sec-4-1-4"><span class="section-number-4">4.1.4</span> Set Babel Languages</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)))
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Highlight Line</h3>
+<div class="outline-text-3" id="text-4-2">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-hl-line-mode 1)
+(set-face-underline 'hl-line nil)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Ido</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Ido mode improves the minibuffer when file searching
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(ido-mode)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Line Numbers</h3>
+<div class="outline-text-3" id="text-4-4">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-linum-mode 1)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> Column Numbers</h3>
+<div class="outline-text-3" id="text-4-5">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(column-number-mode)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Installs</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Package Setup</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Add Repositories
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'package)
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/") t)
+(package-initialize)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Melpa</h3>
+<div class="outline-text-3" id="text-5-2">
+</div><div id="outline-container-sec-5-2-1" class="outline-4">
+<h4 id="sec-5-2-1"><span class="section-number-4">5.2.1</span> Multiple Cursors</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'multiple-cursors)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-2" class="outline-4">
+<h4 id="sec-5-2-2"><span class="section-number-4">5.2.2</span> Magit</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'magit)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-3" class="outline-4">
+<h4 id="sec-5-2-3"><span class="section-number-4">5.2.3</span> Auto Complete</h4>
+<div class="outline-text-4" id="text-5-2-3">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'auto-complete)
+(require 'auto-complete-config)
+(ac-config-default)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-4" class="outline-4">
+<h4 id="sec-5-2-4"><span class="section-number-4">5.2.4</span> Ess</h4>
+<div class="outline-text-4" id="text-5-2-4">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'ess-site)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-5" class="outline-4">
+<h4 id="sec-5-2-5"><span class="section-number-4">5.2.5</span> Tramp</h4>
+<div class="outline-text-4" id="text-5-2-5">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'tramp)
+(setq tramp-default-method "ssh")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-6" class="outline-4">
+<h4 id="sec-5-2-6"><span class="section-number-4">5.2.6</span> Evil Numbers</h4>
+<div class="outline-text-4" id="text-5-2-6">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'evil-numbers)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-7" class="outline-4">
+<h4 id="sec-5-2-7"><span class="section-number-4">5.2.7</span> CSV</h4>
+<div class="outline-text-4" id="text-5-2-7">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'csv-mode)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-8" class="outline-4">
+<h4 id="sec-5-2-8"><span class="section-number-4">5.2.8</span> Icicles</h4>
+<div class="outline-text-4" id="text-5-2-8">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'icicles)
+(icy-mode 0)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-9" class="outline-4">
+<h4 id="sec-5-2-9"><span class="section-number-4">5.2.9</span> YASnippet</h4>
+<div class="outline-text-4" id="text-5-2-9">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require 'yasnippet)
+(yas-global-mode 1)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Manual</h3>
+<div class="outline-text-3" id="text-5-3">
+</div><div id="outline-container-sec-5-3-1" class="outline-4">
+<h4 id="sec-5-3-1"><span class="section-number-4">5.3.1</span> M2</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(load "~/.emacs-Macaulay2" t)
+(global-set-key (kbd "C-c C-l") 'M2-send-to-program)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3-2" class="outline-4">
+<h4 id="sec-5-3-2"><span class="section-number-4">5.3.2</span> Window Number</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(autoload 'window-number-mode
+  "window-number.el"
+  "A global minor mode that enables selection of windows
+  according to numbers with the C-x C-j prefix.  Another mode,
+  `window-number-meta-mode' enables the use of the M- prefix."
+  t)
+
+(window-number-mode)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3-3" class="outline-4">
+<h4 id="sec-5-3-3"><span class="section-number-4">5.3.3</span> Ace Jump</h4>
+<div class="outline-text-4" id="text-5-3-3">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(autoload
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> My Functions</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Return Key Functionality</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Define some functions and a minor mode to allow for using the return key in a non-tratitional way
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defun my:return ()
+  "Call the default bound to RET function. This is intended to be
+  used only within the my-keys-minor-mode, othewise this is a
+  useless function."
+  (interactive)
+  (my-keys-minor-mode 0)
+  ;; interactively call the function bound to the return key
+  (call-interactively (key-binding (kbd "RET") t))
+  (my-keys-minor-mode 1))
+
+(defun my:drop-to-new-line ()
+  "Move to end of line then call default bound RET function"
+  (interactive)
+  (move-end-of-line 1)
+  (my:return))
+
+;; This doesn't work on the first line of a file
+(defun my:rise-to-new-line ()
+  "Move to end of previous line then call default bount RET
+  function"
+  (interactive)
+  (previous-line 1)
+  (my:drop-to-new-line))
+
+(defvar my-keys-minor-mode-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "C-;") 'my:return)
+    (define-key map (kbd "RET") 'my:drop-to-new-line)
+    (define-key map (kbd "&lt;S-return&gt;") 'my:rise-to-new-line)
+    map)
+  "my-keys-minor-mode keymap.")
+
+(define-minor-mode my-keys-minor-mode
+  "A minor mode so that my key settings override annoying major modes."
+  :init-value t
+  :lighter " my-keys")
+
+(defun my-minibuffer-setup-hook ()
+  (my-keys-minor-mode 0))
+
+(add-hook 'minibuffer-setup-hook 'my-minibuffer-setup-hook)
+
+(my-keys-minor-mode 1)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Save Macros as Functions</h3>
+<div class="outline-text-3" id="text-6-2">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defun save-macro (name)
+  "save a macro. Take a name as argument
+   and save the last defined macro under
+   this name at the end of your .emacs"
+   (interactive "SName of the macro: ")  ; ask for the name of the macro
+   (kmacro-name-last-macro name)         ; use this name for the macro
+   (find-file user-init-file)            ; open ~/.emacs or other user init file
+   (goto-char (point-max))               ; go to the end of the .emacs
+   (newline)                             ; insert a newline
+   (insert-kbd-macro name)               ; copy the macro
+   (newline)                             ; insert a newline
+   (switch-to-buffer nil))               ; return to the initial buffer
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Transparency</h3>
+<div class="outline-text-3" id="text-6-3">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(defun transparency (value)
+  "Sets the transparency of the frame window. 0=transparent/100=opaque"
+  (interactive "nTransparency Value 0 - 100 opaque: ")
+  (set-frame-parameter (selected-frame) 'alpha value))
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Global Key Bindings</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Window Movement</h3>
+<div class="outline-text-3" id="text-7-1">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd "C-x &lt;up&gt;") 'windmove-up)
+(global-set-key (kbd "C-x &lt;down&gt;") 'windmove-down)
+(global-set-key (kbd "C-x &lt;right&gt;") 'windmove-right)
+(global-set-key (kbd "C-x &lt;left&gt;") 'windmove-left)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Mutliple Cursors</h3>
+<div class="outline-text-3" id="text-7-2">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C-&gt;") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-&lt;") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-&lt;") 'mc/mark-all-like-this)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> Magit</h3>
+<div class="outline-text-3" id="text-7-3">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd "C-x g") 'magit-status)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-4" class="outline-3">
+<h3 id="sec-7-4"><span class="section-number-3">7.4</span> Ace Jump</h3>
+<div class="outline-text-3" id="text-7-4">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(define-key global-map (kbd "C-c C-SPC") 'ace-jump-mode)
+(define-key global-map (kbd "C-S-c C-SPC") 'ace-jump-line-mode)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-5" class="outline-3">
+<h3 id="sec-7-5"><span class="section-number-3">7.5</span> Move Backward Key Swap</h3>
+<div class="outline-text-3" id="text-7-5">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">;; Swap M-b with M-j and C-b with C-j to give a more convenient
+;; forward backward movement I'm not sure this is the best route since
+;; there are times that I would like to use C-j as intended e.g. in
+;; helm mode C-j is used to expand the current selection and now I'm
+;; forced to use C-b to do so But I don't think I can just use
+;; global-set-key to change the behavior the functions called are
+;; context dependent
+
+;; (define-key key-translation-map (kbd "C-b") (kbd "C-j"))
+;; (define-key key-translation-map (kbd "C-j") (kbd "C-b"))
+
+;; (define-key key-translation-map (kbd "M-b") (kbd "M-j"))
+;; (define-key key-translation-map (kbd "M-j") (kbd "M-b"))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-6" class="outline-3">
+<h3 id="sec-7-6"><span class="section-number-3">7.6</span> Evil Numbers</h3>
+<div class="outline-text-3" id="text-7-6">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
+(global-set-key (kbd "&lt;kp-add&gt;") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "&lt;kp-subtract&gt;") 'evil-numbers/dec-at-pt)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-7" class="outline-3">
+<h3 id="sec-7-7"><span class="section-number-3">7.7</span> Helm</h3>
+<div class="outline-text-3" id="text-7-7">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd "C-x b") 'helm-buffers-list)
+;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Final Calls</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Starting a server allows using the emacsclient so that session info to be shared across frames
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(if (and (fboundp 'server-running-p) 
+	 (not (server-running-p)))
+    (server-start))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Not Executed</h2>
+<div class="outline-text-2" id="text-9">
+</div><div id="outline-container-sec-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> Code Completion</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+This segment inspired by this <a href="https://www.youtube.com/watch?v=HTUE03LnaXA">YouTube video</a>
+</p>
+<blockquote>
+<p>
+;; this function doesn't seem to be working yet
+(defun my:ac-c-header-init()
+  ;; Run command 'gcc -xc++ -E -v -' to find location of c++ header files on system
+  (require 'auto-complete-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers)
+  (setq achead:include-directories
+   (append '("/usr/include/c++/5"
+             "/usr/include/x86<sub>64</sub>-linux-gnu/c++/5"
+             "/usr/include/c++/5/backward"
+             "/usr/lib/gcc/x86<sub>64</sub>-linux-gnu/5/include"
+             "/usr/lib/gcc/x86<sub>64</sub>-linux-gnu/5/include-fixed"
+             "/usr/include/x86<sub>64</sub>-linux-gnu")
+             achead:include-directories)))
+(add-hook 'c++-mode-hook 'my:ac-c-header-init)
+(add-hook 'c-mode-hook 'my:ac-c-header-init)
+;; flymake-google-cpplint comes from melpa
+(defun my:flymake-google-init()
+  (require 'flymake-gogle-cpplint)
+  ;; in order to use this run from shell 'pip install cpplint'
+  (custom-set-variables
+   '(flycheck-c/c++-googlelint-executable "/usr/local/bin/cpplint.py"))
+;;  (custon-set-variables
+;;   '(flymake-gogle-cpplint-command "./.local/lib/python2.7/site-packages/cpplint.pyc"))
+  (flymake-google-cpplint-load))
+(add-hook 'c++-mode-hook 'my:flymake-google-init)
+(add-hook 'c-mode-hook 'my:flymake-google-init)
+;; NOTE: header files and cpplint don't seem to be working
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jason Vander Woude</p>
+<p class="date">Created: 2017-07-18 Tue 22:29</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

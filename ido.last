@@ -1,0 +1,270 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/sudo:root@localhost:/home/" . "jason/")
+ ("/sudo:root@localhost:/etc/" . "systemd/")
+ ("/sudo:root@localhost:/" . "home/")
+ ("/etc/" . "systemd/")
+ ("/home/jason/Documents/stats/ks_imputation/LB-Impute/SourceCode/LB-Impute/src/" . "imputation/")
+ ("/home/jason/Documents/stats/ks_imputation/LB-Impute/SourceCode/LB-Impute/" . "src/")
+ ("/home/jason/Documents/stats/ks_imputation/LB-Impute/SourceCode/" . "LB-Impute/")
+ ("/home/jason/Documents/stats/ks_imputation/LB-Impute/" . "SourceCode/")
+ ("/home/jason/Documents/stats/ks_imputation/" . "R-LB-Impute/")
+ ("/home/jason/Documents/stats/" . "ks_imputation/")
+ ("/jsnvndrw@beaker:/home/jsnvndrw/MyWD/GAW/post_conference/" . "permutation_group/")
+ ("/jsnvndrw@beaker:/home/jsnvndrw/MyWD/GAW/" . "post_conference/")
+ ("/jsnvndrw@beaker:MyWD/genodist/data/" . "exploratory/")
+ ("/jsnvndrw@beaker:MyWD/genodist/" . "data/")
+ ("/jsnvndrw@beaker:MyWD/" . "genodist/")
+ ("/jsnvndrw@beaker:" . "MyWD/")
+ ("/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/genodist/data/" . "exploratory/")
+ ("/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/genodist/" . "data/")
+ ("/jsnvndrw@beaker:/home/jsnvndrw/MyWD/genodist/code/" . "exploratory/")
+ ("/jsnvndrw@beaker:/home/jsnvndrw/MyWD/genodist/" . "code/")
+ ("/jsnvndrw@beaker:/home/jsnvndrw/MyWD/" . "GAW/")
+ ("/jsnvndrw@beaker:/home/jsnvndrw/" . "MyWD/")
+ ("/jsnvndrw@beaker:/home/" . "jsnvndrw/")
+ ("/jsnvndrw@beaker:/" . "home/")
+ ("/jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/genodist/code/" . "main/")
+ ("/jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/genodist/" . "code/")
+ ("/jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/wheatgrass/" . "code/")
+ ("/home/jason/Dropbox/Summer Research Resources/" . "Outline/")
+ ("/home/jason/Dropbox/" . "Summer Research Resources/")
+ ("/jsnvndrw@beaker.dordt.edu:MyWD/GAW/post_conference/" . "interaction_group/")
+ ("/jsnvndrw@beaker.dordt.edu:MyWD/GAW/" . "post_conference/")
+ ("/jsnvndrw@beaker.dordt.edu:MyWD/" . "wheatgrass/")
+ ("/home/jason/.emacs.d/elpa/" . "dirtree-20140129.32/")
+ ("/jason@10.0.39.13:/home/jason/Documents/School/College/Spring Junior/EGR 390/" . "Paper/")
+ ("/jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/GAW/post_conference/" . "interaction_group/")
+ ("/jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/GAW/" . "post_conference/")
+ ("/jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/" . "genodist/")
+ ("/jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/" . "MyWD/")
+ ("/home/jason/Documents/python_programs/" . "image_processing/")
+ ("/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/GAW/post_conference/" . "permutation_group/")
+ ("/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/GAW/" . "post_conference/")
+ ("/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/" . "GAW/")
+ ("/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/" . "MyWD/")
+ ("/" . "home/")
+ ("/scp:jason@10.0.39.13:/home/jason/Documents/School/College/Spring Junior/EGR 390/" . "Paper/")
+ ("/scp:jason@10.0.39.13:/home/jason/Documents/School/College/Spring Junior/" . "EGR 390/")
+ ("/scp:jason@10.0.39.13:/home/jason/Documents/School/College/" . "Spring Junior/")
+ ("/scp:jason@10.0.39.13:/home/jason/Documents/School/" . "College/")
+ ("/scp:jason@10.0.39.13:/home/jason/Documents/" . "School/")
+ ("/scp:jason@10.0.39.13:/home/jason/" . "Documents/")
+ ("/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/3040/mem_sim/" . ".git/")
+ ("/jason@10.0.39.13:" . "Documents/")
+ ("/jason@10.0.39.13:/home/jason/Documents/School/College/Spring Junior/" . "EGR 390/")
+ ("/jason@10.0.39.13:/home/jason/Documents/School/College/" . "Spring Junior/")
+ ("/jason@10.0.39.13:/home/jason/Documents/School/" . "College/")
+ ("/jason@10.0.39.13:/home/jason/Documents/" . "Other/")
+ ("/jason@10.0.39.13:/home/jason/" . "Documents/")
+ ("/jason@10.0.39.13:/home/" . "jason/")
+ ("/jason@10.0.39.13:/" . "home/")
+ ("/jsnvndrw@beaker.dordt.edu:3040/" . "mem_sim/")
+ ("/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/3040/" . "mem_sim/")
+ ("/jsnvndrw@beaker.dordt.edu:" . "MyWD/")
+ ("/jsnvndrw@beaker.dordt.edu:/home/" . "jsnvndrw/")
+ ("/jsnvndrw@beaker.dordt.edu:/" . "home/")
+ ("/home/jason/Documents/School/College/Spring Junior/CMSC 340/n_body/CMSC-340-N-Body/" . "CMSC-340-N-Body-dev-gfx/")
+ ("/home/jason/Documents/School/College/Spring Junior/CMSC 340/n_body/" . "fixer/")
+ ("/home/jason/Documents/School/College/Spring Junior/CMSC 340/" . "n_body/")
+ ("/home/jason/Documents/School/College/Spring Junior/" . "CMSC 340/")
+ ("/home/jason/Documents/School/College/" . "Spring Junior/")
+ ("/home/jason/Documents/School/" . "College/")
+ ("/home/jason/.emacs.d/lisp/" . "themes/")
+ ("/home/jason/.emacs.d/" . "elpa/")
+ ("/home/jason/" . ".emacs.d/")
+ ("/home/jason/Documents/" . "stats/")
+ ("/home/" . "jason/")
+ ("/home/jason/Documents/Emacs/" . "readline/")
+ ("/home/jason/Documents/Emacs/readline/" . "examples/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/jason/.emacs.d/"
+ "/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/GAW/post_conference/permutation_group/"
+ "/jsnvndrw@beaker:/home/jsnvndrw/MyWD/GAW/post_conference/permutation_group/"
+ "/jason@10.0.39.13:/home/jason/Documents/Other/"
+ "/jason@"
+ "/home/jason/Documents/stats/ks_imputation/R-LB-Impute/"
+ "/home/jason/"
+ "/home/jason/Documents/"
+ "/home/jason/Documents/stats/ks_imputation/"
+ "/sudo:root@localhost:/home/jason/"
+ "/sudo:root@localhost:/etc/systemd/"
+ "/etc/systemd/"
+ "/home/jason/Documents/recipes/"
+ "/home/jason/Documents/stats/ks_imputation/LB-Impute/SourceCode/LB-Impute/src/imputation/"
+ "/home/jason/.emacs.d/elpa/dirtree-20140129.32/"
+ "/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/genodist/data/exploratory/"
+ "/jsnvndrw@beaker:MyWD/genodist/data/exploratory/"
+ "/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/genodist/"
+ "/home/jason/.ssh/"
+ "/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/genodist/documentation/"
+ "/jsnvndrw@beaker:/home/jsnvndrw/MyWD/genodist/code/exploratory/"
+ "/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/genodist/"
+ "/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/GAW/post_conference/permutation_group/"
+ "/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/genodist/code/exploratory/"
+ "/jsnvndrw@beaker.dordt.edu:MyWD/wheatgrass/"
+ "/home/jason/Dropbox/Summer Research Resources/Outline/"
+ "/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/wheatgrass/"
+ "/jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/wheatgrass/"
+ "/home/jason/Dropbox/Summer Research Resources/Jason/"
+ "/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/GAW/"
+ "/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/GAW/post_conference/interaction_group/"
+ "/jsnvndrw@beaker.dordt.edu:MyWD/GAW/post_conference/interaction_group/"
+ "/jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/GAW/post_conference/interaction_group/"
+ "/jason@10.0.39.13:/home/jason/"
+ "/run/user/1000/gvfs/sftp:host=beaker.dordt.edu/home/lcsvndrb/GAW/"
+ "/home/jason/.emacs.d/elpa/latex-preview-pane-20151023.1303/"
+ "/home/jason/Documents/latex/"
+ "/jason@10.0.39.13:/home/jason/Documents/School/College/Spring Junior/EGR 390/Paper/"
+ "/jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/GAW/post_conference/all_groups/"
+ "/home/jason/Documents/python_programs/image_processing/"
+ "/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/MyWD/GAW/post_conference/all_groups/"
+ "/jsnvndrw@beaker.dordt.edu:"
+ "/jason@10.0.39.13:"
+ "/scp:jason@10.0.39.13:/home/jason/Documents/School/College/Spring Junior/EGR 390/Paper/"
+ "/jason@10.0.39.13:/home/jason/Documents/School/College/Spring Junior/CMSC 340/"
+ "/jsnvndrw@beaker.dordt.edu:3040/mem_sim/"
+ "/home/jason/Documents/School/College/Spring Junior/CMSC 340/n_body/fixer/"
+ "/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/3040/mem_sim/"
+ "/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/3040/emacs_fun/"
+ "/jsnvndrw@beaker.dordt.edu:3040/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+ "init.org"
+ "stage_1_utilities.R"
+ "stage_0_utilities.R"
+ "post_paper_table.org"
+ "text.txt"
+ "10.0.39.13"
+ "functions.R"
+ ".emacs"
+ ".emacs.orig"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/jason/.emacs.d/scratch/" (22903 48091 727066 692000) "../" "#2017_07_25.el#" ".#2017_07_25.el" "./")
+
+ ("/home/jason/.emacs.d/" (22903 47432 908060 343000) ".mc-lists.el" "themes/" "../" ".git/" "init.css" "ido.last" "init.el" "elpa/" "games/" "lisp/" "init.html" "init.org~" "ac-comphist.dat" "init.org" "auto-save-list/" "url/" "tramp" "init.el~" ".emacs" "session.10c560f23b587d38ce149384433121782300000023790059" "./" "snippets/" "session.103ee994351e83d11714896334812770300000071780051" "abbrev_defs" "ido.last~" "init.html~")
+
+ ("/home/jason/" (22903 47231 465585 497000) ".Xauthority" ".emacs~" ".mozilla/" "../" ".bash_logout" ".emacs.d/" ".dmrc" ".sudo_as_admin_successful" ".install4j" ".Rhistory" ".wget-hsts" "Music/" ".ssh/" "Pictures/" "examples.desktop" "Downloads/" ".pki/" ".thunderbird/" "Public/" ".nano/" ".xsession-errors.old" "tempfundamental" "Documents/" "R/" "TASSEL5/" "Dropbox/" ".emacs.back" ".lesshst" ".local/" "Videos/" ".dropbox-dist/" ".#tempfundamental" ".gnupg/" ".dropbox/" ".bash_aliases.swp" ".cache/" ".config/" ".oracle_jre_usage/" "#tempfundamental#" "Desktop/" ".emacs.orig" ".kde/" "nohup.out" ".emacs" ".bash_aliases~" ".gconf/" ".emacs.back~" ".ICEauthority" "./" ".bashrc" ".profile" ".dbus/" "tempfundamental~" "Templates/" ".java/" ".xsession-errors" "texput.log" ".gnome/" ".bash_aliases" ".gitconfig" ".bash_history")
+
+ ("/home/jason/Documents/stats/ks_imputation/R-LB-Impute/" (22894 27028 630981 438000) "GetVariantNames.R~" "../" "functions.R~" "unit_tests.R~" "unit_tests.R" "README~" ".git/" "README" "Impute.R" "GetVariantNames.R" ".gitignore" "ImputeMain.R~" "temp.R~" "Impute.R~" "ImputeOffspring.R" "ImputeOffspring.R~" "functions.R" "./" "testout.vcf" "temp.R" "ImputeMain.R")
+
+ ("/home/jason/Documents/" (22894 45015 998610 690000) "recipes/" "../" "stats/" ".Rhistory" "math/" "temp2.el" "temp2.org" "temp.org" "bookmarks_7_13_17.html" "temp2.org~" "recipes.zip" "./" "temp.el" "temp.org~")
+
+ ("/home/jason/Documents/stats/" (22889 35330 800218 366000) ".~lock.IterationsConfidence.ods#" "../" "R-package-notes.org" "methods_overview.aux" "notes_2017_5_30.pdf" "ks_imputation/" "#test.R#" "gaw/" "methods_overview.pdf" "IterationsConfidence.ods" "test.R" "methods_overview.tex~" "notes_2017_5_30.odt" "methods_overview.tex" "./" "tex/" "R-package-notes.org~" "methods_overview.log" "methods_overview.out")
+
+ ("/home/jason/Documents/stats/ks_imputation/LB-Impute/SourceCode/LB-Impute/src/imputation/" (22889 3303 154071 950000) "#Impute.java#" "ParseDistances.java" "../" "#ImputeOffspring.java#" "ImputeOffspring.java" "FindSampleColumns.java" "FindPath2.java" "Impute.java" "ImputeParents.java" "GetVariantNames.java" "RemoveValues.java" "CollapseValuesOffspring.java" ".#Impute.java" "./" ".#ImputeOffspring.java" "ImputeMain.java" "Compare.java")
+
+ ("/home/jason/Documents/stats/ks_imputation/" (22893 65163 545728 999000) "../" ".git/" "R-LB-Impute/" "LB-Impute-notes.html" "tpg-7-3-plantgenome2014.05.0023.pdf" "LB-Impute/" "319.full.pdf" "org/" "LB-impute.pdf" "./" "LakinFuller_GBSv2_20170509.vcf" "tassel-practice/" "LB-Impute-notes.html~" "LB-Impute-notes.org~" "LB-Impute-notes.org")
+
+ ("/etc/systemd/" (22885 3282 595458 933000) "bootchart.conf" "user/" "../" "system/" "system.conf" "network/" "user.conf" "logind.conf" "timesyncd.conf" "resolved.conf" "./" "journald.conf" "logind.conf~")
+
+ ("/home/jason/Documents/recipes/" (22884 58303 856165 681000) "../" "recipes.org" "images/" "recipe-template.org" "recipes.org~" "recipes.html" "./" "recipes.html~")
+
+ ("/etc/" (22883 31828 545405 689000) "localtime" "default/" "mailcap" "hdparm.conf" "nsswitch.conf" "crontab" "calendar/" "bluetooth/" "kerneloops.conf" "bindresvport.blacklist" "debian_version" "pulse/" "sudoers.d/" "groff/" "gnome-app-install/" "initramfs-tools/" "apg.conf" "hostname" "perl/" "update-manager/" "group-" "brltty.conf" "crypttab" "ca-certificates.conf" "alternatives/" "profile" "gshadow-" "rpc" "pam.d/" "usb_modeswitch.conf" "shadow-" "resolv.conf" "iproute2/" "thunderbird/" "magic" "magic.mime" "cracklib/" "securetty" "gss/" "popularity-contest.conf" "os-release" "compizconfig/" "shadow" "xml/" "hosts" "insserv.conf" "pam.conf" "mtab" "gdb/" "security/" "python3.5/" "bash_completion" "hosts.deny" "opt/" "apm/" "mtools.conf" "anacrontab" "aptdaemon/" "papersize" "ImageMagick-6/" "udisks2/" "polkit-1/" "xdg/" "issue.net" "dpkg/" "ca-certificates/" "insserv/" "rc0.d/" "ld.so.cache" "libaudit.conf" "rc4.d/" "subgid-" "mime.types" "bash_completion.d/" "emacs/" "rc2.d/" "passwd" "ssh/" "modules" "machine-id" "inputrc" "apparmor.d/" "logrotate.conf" "protocols" "cron.daily/" "X11/" "speech-dispatcher/" "appstream.conf" "python2.7/" "lvm/" "lightdm/" "UPower/" "networks" "udev/" "vim/" "thermald/" "timezone" "R/" "firefox/" "update-notifier/" "lintianrc" "rmt" "modprobe.d/" "apport/" "libreoffice/" "subuid-" "network/" "libnl-3/" "resolvconf/" "manpath.config" "kernel-img.conf" "lighttpd/" "newt/" "insserv.conf.d/" "logcheck/" "signon-ui/" "dnsmasq.d/" "login.defs" "dhcp/" "python/" "cups/" "rsyslog.conf" "dconf/" "signond.conf" "ltrace.conf" "dbus-1/" "doc-base/" "ufw/" "passwd-" "init/" "rc6.d/" "selinux/" "deluser.conf" "mke2fs.conf" ".pwd.lock" "acpi/" "zsh_command_not_found" "fonts/" "apt/" "modules-load.d/" "nanorc" "vtrgb" "fuse.conf" "ifplugd/" "skel/" "ssl/" "ucf.conf" "apparmor/" "sysctl.conf" "ld.so.conf.d/" "avahi/" "gtk-3.0/" "hp/" "legal" "debconf.conf" "rc1.d/" "rc3.d/" "emacs24/" "group" "guest-session/" "gai.conf" "pcmcia/" "terminfo/" "update-motd.d/" "subuid" "shells" "cron.monthly/" "fstab" "chktexrc" "LatexMk" "dictionaries-common/" "wpa_supplicant/" "sensors.d/" "sudoers" "cupshelpers/" "environment" "texmf/" "depmod.d/" "rc.local" "tmpfiles.d/" "lsb-release" "console-setup/" "sysctl.d/" "rc5.d/" "python3/" "cron.weekly/" "cron.d/" "tex4ht/" "libao.conf" "sane.d/" "kbd/" "pki/" "hosts.allow" "binfmt.d/" "locale.gen" "gconf/" "ld.so.conf" "init.d/" "bash.bashrc" "apache2/" "gtk-2.0/" "wgetrc" "fwupd.conf" "libpaper.d/" "pnm2ppa.conf" "logrotate.d/" "rcS.d/" "NetworkManager/" "host.conf" "ppp/" "adduser.conf" "upstart-xsessions" "usb_modeswitch.d/" "updatedb.conf" "at-spi2/" "locale.alias" "ghostscript/" "cron.hourly/" "profile.d/" "brlapi.key" "gnome/" "profile~" "sgml/" "grub.d/" "drirc" "brltty/" "rsyslog.d/" "sensors3.conf" "iftab" "systemd/" "chatscripts/" "services" "issue" "gshadow" "pm/" "kernel/" "subgid" "mailcap.order" "ldap/" "../" "./")
+
+ ("/home/jason/Documents/stats/ks_imputation/LB-Impute/" (22879 61048 523822 866000) "LB-Impute.jar" "outputvcf7.vcf" "../" ".git/" "outputvcf.vcf" "LB-ImputeLicense.pdf" "SourceCode/" "outputvcf5.vcf" "example_data/" "nohup.out" "./" "LB-Impute_Manual.pdf")
+
+ ("/home/jason/Documents/stats/ks_imputation/LB-Impute/SourceCode/" (22830 54916 204247 160000) "../" "LB-Impute/" "./")
+
+ ("/home/jason/Documents/stats/ks_imputation/LB-Impute/SourceCode/LB-Impute/" (22830 54916 208249 490000) "src/" "../" "bin/" ".settings/" ".classpath" ".project" "./")
+
+ ("/home/jason/Documents/stats/ks_imputation/LB-Impute/SourceCode/LB-Impute/src/" (22830 54916 208249 490000) "../" "./" "imputation/")
+
+ ("/home/jason/.emacs.d/elpa/dirtree-20140129.32/" (22851 1547 434628 34000) "../" "dirtree.el" "dirtree-autoloads.el~" "dirtree-pkg.elc" "dirtree-pkg.el" "dirtree-autoloads.el" "./" "dirtree.elc")
+
+ ("/home/jason/.emacs.d/elpa/" (22851 1547 310627 876000) "archives/" "windata-20090830.340/" "yasnippet-20170310.1724/" "iedit-20161228.2111/" "../" "highlight-current-line-20051013.1056/" "multi-20131013.844/" "gnupg/" "julia-mode-20170210.1504/" "dash-20170207.2056/" "evil-numbers-20140606.551/" "popup-20160709.729/" "flymake-google-cpplint-20140205.525/" "latex-preview-pane-20151023.1303/" "git-commit-20170314.1414/" "auto-complete-c-headers-20150911.2023/" "helm-google-20160620.1149/" "ac-html-csswatcher-readme.txt" "magit-20170312.616/" "ess-20170327.248/" "dirtree-20140129.32/" "tree-mode-20151104.531/" "auto-complete-20170124.1845/" "multiple-cursors-20170215.552/" "flymake-easy-20140818.55/" "helm-core-20170316.626/" "./" "helm-spotify-20160905.1447/" "async-20170219.942/" "with-editor-20170111.609/" "magit-popup-20170308.146/" "helm-20170316.626/" "google-20140416.1048/")
+
+ ("/run/" (22850 65195 161129 314000) "initramfs/" "udev/" "plymouth/" "lock/" "blkid/" "systemd/" "lvm/" "dmeventd-server" "dmeventd-client" "tmpfiles.d/" "mount/" "log/" "lvmetad.pid" "network/" "pppconfig/" "initctl" "shm/" "sendsigs.omit.d/" "sudo/" "user/" "utmp" "resolvconf/" "acpid.socket" "uuidd/" "cups/" "snapd.socket" "snapd-snap.socket" "avahi-daemon/" "dbus/" "crond.pid" "alsa/" "crond.reboot" "rsyslogd.pid" "thermald/" "irqbalance.pid" "NetworkManager/" "lightdm.pid" "lightdm/" "acpid.pid" "wpa_supplicant/" "agetty.reload" "udisks2/" "mlocate.daily.lock" "dhclient-wlo1.pid" "do-not-hibernate" "reboot-required" "reboot-required.pkgs" "../" "./")
+
+ ("/run/user/" (22850 25996 221012 778000) "1000/" "../" "./")
+
+ ("/run/user/1000/" (22850 25942 72861 123000) "systemd/" "keyring/" "upstart/" "upstart-udev-bridge.1519.pid" "dbus-session" "upstart-dbus-bridge.1519.pid" "upstart-file-bridge.1519.pid" "gvfs/" "dconf/" "pulse/" "unity/" "../" "./")
+
+ ("/run/user/1000/gvfs/" (22850 25899 0 0) "sftp:host=beaker,user=jsnvndrw/" "../" "./")
+
+ ("/run/user/1000/gvfs/sftp:host=beaker,user=jsnvndrw/" (22829 48495 0 0) "sbin/" "scratch/" "lib/" "bin/" "lib64/" ".rnd" "etc/" "home/" "oldhome/" ".autorelabel" "media/" "mnt/" "usr/" "cm/" ".readahead" "var/" "sys/" "cgroups/" "lost+found/" "tftpboot/" "1" "opt/" "srv/" "dev/" "root/" "nohup.out" "tmp/" "boot/" "run/" "proc/" "../" "./")
+
+ ("/run/user/1000/gvfs/sftp:host=beaker,user=jsnvndrw/home/" (22849 43464 0 0) "Mbolt/" "sbenson/" "swang/" "nhartman/" "lstanislaw/" "blake/" "bgilbert/" "jalfier/" "manderson/" "jbrouwer/" "cmsc340/" "ndrwdlms2/" "thnbrmml2/" "tmwrntjs/" "grthvndn/" "jcbvntl/" "dvdtkrny/" "thnbrmml/" "rynkrs/" "ndrwdlms/" "lgnswnsn/" "jrdnkhsm/" "bbybs/" "nthnrydr/" "lcsvndrb/" "krsskstr/" "plgrdns/" "brycvnmn/" "jytmmr/" "jsnvndrw/" "cfictorie/" "dstoub/" "zchzylst/" "scratch/" "mdejongh/" "jnnvnstr/" "pgonthier/" "bin/" "BreemsGroup/" "nyklsbk/" "jwestra/" "jrmyklyn/" "nthnhkmn/" "TintleGroup/" "ntintle/" "mchdms/" "dshdgrt/" "cdisselkoen/" "backup/" "nbreems/" "testuser/" "cmsupport/" "../" "./")
+
+ ("/run/user/1000/gvfs/sftp:host=beaker,user=jsnvndrw/home/jsnvndrw/" (22850 61189 0 0) "external/" ".Xauthority" "CMSC-340-N-Body/" ".viminfo" ".RData" "3040/" ".gitconfig" "git_test/" "slurm-5806.out" "nodes.sh" "wgetfinish" "FrameTable.java~" ".pki/" ".Rhistory" "vectorized/" "simple_initial_test.Rout" "wcheck22" "wget22" "Rplots.pdf" ".slurm/" ".tmux.conf" ".tmux.conf~" ".emacs.d/" "sar.out" ".lesshst" ".bash_profile.bak" ".Renviron" "Downloads/" "Rpackages/" "MyWD/" ".local/" "Desktop/" ".dbus/" ".bash_history" ".ssh/" ".config/" ".cache/" ".bash_profile" ".kshrc" ".bash_logout" ".bashrc" ".emacs" ".mozilla/" "../" "./")
+
+ ("/run/user/1000/gvfs/sftp:host=beaker,user=jsnvndrw/home/jsnvndrw/MyWD/" (22842 37926 0 0) "genodist/" "Bayesian3.0/" "GAW/" "../" "./")
+
+ ("/run/user/1000/gvfs/sftp:host=beaker,user=jsnvndrw/home/jsnvndrw/MyWD/GAW/" (22755 60073 0 0) "post_conference/" "main_run.out" "saved/" "stage_2_run.R" "perm_dataframe_run.R" ".RDataTmp" "main_run.sh" "error/" "massive_permutations/" "interaction_group/" "provided/" "get_stage_2_p_values.R" "stage_1_run.R" "stage_1.sh" "stage_2_utilities.R" "permutation_group_methods.R" "papers/" "stage_0_utilities.R" "permutation_group/" "stage_2_summary_run.R" "solution_verification_utilities.R" "stage_1_utilities.R" "package_and_test.R" "kinship_utilities.R" "stage_0_run.R" ".test/" ".git/" ".RDataTmp1" "GAW.Rproj" "verification_oneoffs.R" "output/" ".Rproj.user/" "my_doc/" ".Rhistory" "stage_2.sh" "file_read_utilities.R" "file_compression_utilities.R" "README" "non_standardized_run/" ".RData" "pipeline.R" "old_slurm_output/" "utilities.R" "non-essentials/" "matlab_neat/" "GAW20/" "../" "./")
+
+ ("/run/user/1000/gvfs/sftp:host=beaker,user=jsnvndrw/home/jsnvndrw/MyWD/GAW/post_conference/" (22755 60817 0 0) ".#README.txt" "README.txt" "README.txt~" "all_groups/" "permutation_group/" "interaction_group/" "../" "./")
+
+ ("/run/user/1000/gvfs/sftp:host=beaker,user=jsnvndrw/home/jsnvndrw/MyWD/GAW/post_conference/permutation_group/" (22802 6157 0 0) ".#stage_2.sh" "m_transform.R" "file_read_utilities.R" "utilities.R" "stage_2_utilities.R" "stage_1_utilities.R" "stage_0_utilities.R" "kinship_utilities.R" "GAW20/" "slurm-6325-node002.out" "slurm-6325-node004.out" "stage_2.sh" "#stage_2_run.R#" "stage_2_finish.sh" "stage_2_finish.sh~" "#_ascp_bjsnvndrw@beaker.dordt.edu_b_ahome_ajsnvndrw_aMyWD_aGAW_apost__conference_apermutation__group_astage__2__run.R#" "slurm-6325-node003.out" "slurm-6325-node001.out" "slurm-6325.out" ".Rhistory" ".RData" "stage_2_run.R" "old_slurm/" "saved/" "provided/" "../" "./")
+
+ ("/run/user/1000/gvfs/sftp:host=beaker,user=jsnvndrw/home/jsnvndrw/MyWD/GAW/post_conference/permutation_group/saved/" (22802 6166 0 0) "kinship_matrix.rds" "stage_1/" "stage_0/" "stage_2/" "stage_2_May_8/" "../" "./")
+
+ ("/run/user/1000/gvfs/sftp:host=beaker,user=jsnvndrw/home/jsnvndrw/MyWD/GAW/post_conference/permutation_group/saved/stage_2/" (22802 64202 0 0) "sim150/" "sim149/" "sim100/" "sim50/" "sim148/" "sim49/" "sim200/" "sim99/" "sim48/" "sim147/" "sim199/" "sim98/" "sim47/" "sim146/" "sim198/" "sim97/" "sim46/" "sim145/" "sim197/" "sim96/" "sim45/" "sim144/" "sim196/" "sim95/" "sim44/" "sim195/" "sim143/" "sim94/" "sim43/" "sim194/" "sim142/" "sim93/" "sim42/" "sim193/" "sim141/" "sim92/" "sim41/" "sim192/" "sim140/" "sim40/" "sim91/" "sim191/" "sim139/" "sim90/" "sim39/" "sim190/" "sim138/" "sim89/" "sim38/" "sim189/" "sim137/" "sim88/" "sim37/" "sim188/" "sim136/" "sim87/" "sim36/" "sim187/" "sim135/" "sim86/" "sim35/" "sim186/" "sim134/" "sim85/" "sim34/" "sim185/" "sim133/" "sim84/" "sim33/" "sim184/" "sim132/" "sim83/" "sim32/" "sim183/" "sim131/" "sim82/" "sim31/" "sim182/" "sim130/" "sim81/" "sim30/" "sim181/" "sim129/" "sim80/" "sim29/" "sim180/" "sim128/" "sim79/" "sim28/" "sim179/" "sim127/" "sim78/" "sim27/" "sim178/" "sim126/" "sim77/" "sim26/" "sim177/" "sim125/" "sim76/" "sim25/" "sim176/" "sim124/" "sim75/" "sim24/" "sim175/" "sim123/" "sim23/" "sim74/" "sim174/" "sim122/" "sim73/" "sim22/" "sim173/" "sim72/" "sim172/" "sim21/" "sim121/" "sim20/" "sim71/" "sim171/" "sim120/" "sim70/" "sim19/" "sim170/" "sim119/" "sim69/" "sim18/" "sim169/" "sim118/" "sim68/" "sim168/" "sim17/" "sim117/" "sim67/" "sim167/" "sim16/" "sim116/" "sim66/" "sim166/" "sim15/" "sim115/" "sim65/" "sim14/" "sim165/" "sim114/" "sim13/" "sim64/" "sim164/" "sim113/" "sim63/" "sim163/" "sim12/" "sim112/" "sim62/" "sim162/" "sim11/" "sim111/" "sim61/" "sim10/" "sim161/" "sim110/" "sim60/" "sim9/" "sim160/" "sim109/" "sim8/" "sim59/" "sim159/" "sim108/" "sim58/" "sim158/" "sim7/" "sim107/" "sim57/" "sim157/" "sim6/" "sim106/" "sim56/" "sim156/" "sim5/" "sim105/" "sim155/" "sim55/" "sim4/" "sim104/" "sim54/" "sim154/" "sim3/" "sim103/" "sim53/" "sim153/" "sim2/" "sim102/" "sim52/" "sim152/" "sim1/" "sim101/" "sim151/" "sim51/" "sim0/" ".existing as of 2017-05-09 14:27:18" ".scripts run on 2017-05-09 14:27:18/" "../" "./")
+
+ ("/run/user/1000/gvfs/sftp:host=beaker,user=jsnvndrw/home/jsnvndrw/MyWD/GAW/post_conference/permutation_group/saved/stage_2/.scripts run on 2017-05-09 14:27:18/" (22802 6166 0 0) "utilities.R" "stage_2_utilities.R" "stage_2_run.R" "stage_1_utilities.R" "stage_0_utilities.R" "m_transform.R" "kinship_utilities.R" "file_read_utilities.R" "../" "./")
+
+ ("/home/jason/.ssh/" (22842 56572 668114 194000) "id_rsa" "../" "known_hosts" "config" "id_rsa.pub" "./")
+
+ ("/home/jason/Dropbox/Summer Research Resources/" (22824 46072 139706 256000) "lmlinalg05_0904.pdf" "../" "Outline/" "lmlinalg05_0903.pdf" "2004 - Symbolic Powers of Edge Ideals.pdf" "2016 - Author Copy - Waldschmidt Constant of Squarefree Monomial Ideals.pdf" "2002 - The Stable Set of Associated Primes of the Ideal of a Graph.pdf" ".dropbox" "monomial.pdf" "2012 - Regina Summer School.pdf" "Jason/" "lmlinalg05_0901.pdf" "2014 - Symbolic Powers of Monomial Ideals.pdf" "./" "lmlinalg05_0902.pdf" "M2/")
+
+ ("/home/jason/Dropbox/" (22824 46064 135209 705000) "Get Started with Dropbox.pdf" "../" ".git/" ".dropbox.cache/" "Summer Research Resources/" ".dropbox" "./")
+
+ ("/home/jason/.emacs.d/lisp/themes/" (22833 22125 176262 336000) "../" "deep-thought-theme-source-code.el" "./")
+
+ ("/home/jason/.emacs.d/themes/" (22833 22126 4258 722000) "../" "#deep-thought-theme-source-code.el#" "deep-thought-theme-source-code.el" "./")
+
+ ("/home/jason/.emacs.d/elpa/latex-preview-pane-20151023.1303/" (22833 22125 228262 110000) "../" "latex-preview-pane-autoloads.el~" "latex-preview-pane-autoloads.el" "latex-preview-pane.el" "message-no-preview-yet.txt" "message-latex-preview-pane-welcome.txt" "latex-preview-pane.elc" "latex-preview-pane-pkg.el" "./")
+
+ ("/home/jason/Dropbox/Summer Research Resources/Outline/" (22824 46065 51266 351000) "../" "Summer2017.blg" "alphanum.bst" "Summer2017.out" "Summer2017.tex~" "Summer2017.aux" "Summer2017.log" "summer17.bib" "Summer2017.tex" "./" "Summer2017.pdf" "Summer2017.bbl")
+
+ ("/home/jason/Dropbox/Summer Research Resources/Jason/" (22824 46069 823562 224000) "Test First Hypothesis.M2~" "Yellow_Errata.org~" "Proofs.log" "../" "Proofs.tex~" "may_11.m2~" "may_15.m2" "may_11.m2" "Yellow_Errata.org" "may_16.m2~" "may_15.m2~" "may_12.m2~" "ThomasFunctions.m2~" "es.log" "m2_saved/" "Proofs.out" "Test First Hypothesis.M2" "May17 Function.M2" "cycle_5_symbolic_20.sm2" "Yellow_Errata.html" "may_18.m2" "ThomasFunctions.m2" "may_16.m2" "papers/" "es.out" "Yellow_Errata.tex~" "test.m2" "es.tex" "es.aux" "functions.m2~" "Proofs.aux" "AlgebraNotes.pdf" "may_12.m2" "may_18.m2~" "./" "Proofs.pdf" "may_19.m2" "functions.m2" "Yellow_Errata.pdf" "Edge Reductions.M2" "Yellow_Errata.tex" "es.pdf" "Proofs.tex" "es.tex~" "#Test First Hypothesis.M2#")
+
+ ("/home/" (22824 45378 69430 449000) "../" "jason/" "./")
+
+ ("/home/jason/Documents/python_programs/image_processing/" (22774 59198 733323 442000) "example_pipe.py" "example_1.py~" "example_1.py" "example_3.py" "example_pipe.py~" "OpenCV.odp" "adb_pipe.py~" "gradient.png" "OpenCV_back2.odp" "opencv/" "./" "OpenCV_back.odp" "image_thresholding.py" "../" "#example_1.py#" "example_3.py~" "adb_pipe.py" "grayscalejpg" "example_2.py~" "adb_test_example_2.py" "example_2.py" "image_thresholding.py~")
+
+ ("/run/user/1000/gvfs/sftp:host=beaker.dordt.edu/home/lcsvndrb/GAW/" (22798 35369 0 0) ".#everything.sh" "Files/" ".#pvaluecode.sh" ".#pvaluecode.R" ".#FinalCode.sh" ".#FinalCode.R" "Old_Files/" ".#hello.R" "FinalCode.sh" "FinalCode.sh~" "slurm-6314.out" "hello.R~" "pvaluecode.sh~" "May_6_First_Results/" "genes_list.rds" "pvaluecode.R" "pvaluecode.R~" "Old_Results/" "Old_Finale/" "old_genes_list.rds" "compare.R" "CumulativeSingleHits.R" "CumulativeHits.R" "slurm-6316.out" "slurm-6315.out" "hello.R" "pvaluecode.sh" "everything.sh" "everything.sh~" "old_slurm_files/" "FinalCode.R" "FinalCode.R~" "Finale/" "Results/" "../" "./")
+
+ ("/home/jason/Documents/latex/" (22783 39653 919654 647000) "./" "sample.pdf" "../" "sample.aux" "sample.tex~" "sample.log" "sample.tex")
+
+ ("/home/jason/Documents/python_programs/" (22727 606 705150 950000) "./" "image_processing/" "../")
+
+ ("/home/jason/Documents/School/College/Spring Junior/CMSC 340/n_body/fixer/" (22730 6635 30074 0) "zeta.zip" "README.md" "makefile" "main.c" "gfx.h" "gfx.c" "filereader.h" "filereader.c" "collision.in" "bodies.h" "bodies.c" "app" ".gitignore" ".git/" "../" "./")
+
+ ("/home/jason/Documents/Python/OpenCV/" (22729 64784 881272 100000) "soccer-ball.jpg" "opencv/" "object_tracking.py~" "object_tracking.py" "image_thresholding.py~" "example_pipe.py" "example_2.py" "example_1.py~" "example_1.py" "DSCN1441.MOV" "cv2" "card_tracker/" "adb_pipe.py" "../" "./")
+
+ ("/home/jason/Documents/Emacs/" (22729 37682 882534 600000) "reference" "readline/" "../" "./")
+
+ ("/home/jason/Documents/School/College/Spring Junior/CMSC 340/n_body/CMSC-340-N-Body/CMSC-340-N-Body-dev-gfx/" (22730 2778 637281 100000) "window.cpp" "testing.c" "system.in" "README.md" "mapping.c" "makefile" "main.c" "gfx.h" "gfx.c" "filereader.h" "filereader.c" "collision.in" "bodies.h" "bodies.c" "app" ".gitignore" "../" "./")
+
+ ("/home/jason/Documents/School/College/Spring Junior/CMSC 340/n_body/CMSC-340-N-Body/" (22730 1449 858084 500000) "window.o" "window.cpp~" "window.cpp" "window" "TODO" "testing.c" "system.in" "samples.c" "samples" "README.md" "nbody.o" "mapping.c~" "mapping.c" "makefile" "main.c" "libCfile.so" "gfx.h" "gfx.c" "filereader.h" "filereader.c" "compile" "collision.in" "CMSC-340-N-Body-dev-gfx.zip" "CMSC-340-N-Body-dev-gfx/" "bodies.so" "bodies.o" "bodies.h~" "bodies.h" "bodies.c~" "bodies.c" "app" ".gitignore" ".git/" "../" "./")
+
+ ("/home/jason/Documents/School/College/Spring Junior/CMSC 340/n_body/" (22730 2901 530588 700000) "preliminary/" "practice/" "fixer/" "CMSC-340-N-Body/" "../" "./")
+
+ ("/home/jason/Documents/School/College/Spring Junior/CMSC 340/" (22728 4986 9204 400000) "n_body/" "Notes.odt" "mandelbrot/" "linux_tutorial_part_2/" "hi.o" "hi.cpp" "../" "./")
+
+ ("/home/jason/Documents/School/College/Spring Junior/" (22694 30776 752677 900000) "TODO" "MATH 209/" "EGR 390/" "EGR 323/" "EGR 304/" "CMSC 340/" "../" "./")
+
+ ("/home/jason/Documents/School/College/" (22728 10457 223359 300000) "Individual Studies/" "Graduate School/" "Favorites - Shortcut.lnk" "Fall Sophomore/" "Fall Junior/" "Fall Freshman/" "Engineering Scholarships.docx" "Engineering Scholarships - Interstates.docx" "Dordt College Financial Aid_ Supplemental Data Form Receipt.pdf" "Dordt College Financial Aid  Supplemental Data Form.mhtml" "CS and EE 4 Year.xlsx" "CS and EE 4 Year CURRENT PLAN.ods" "CS and EE 4 Year as of 9-27-16.ods" "CS and EE 4 Year as of 4-2-16.xlsx" "~$lunteering.docx" "~$gineering Scholarships.docx" "Volunteering.docx" "Tutoring/" "time_log.csv" "Time Card Scans/" "statcrack.user.js" "STAT RESEARCH/" "Spring Sophomore/" "Spring Junior/" "Spring Freshman/" "ServerFileCheck.user.js" "ServerFileCheck.js" "Scholarship Essays/" "REU/" "Resume Checklist~" "Resume Checklist" "Relevant Courses.odt" "PTC Liscense Agreement.pdf" "Projects/" "Pre-Schoolyear/" "Pay Advice/" "Misc/" "jsnvndrw (G Drive on 3-3-16)/" "CS and EE 4 Year as of 3-21-16.xlsx" "CS and EE 4 Year as of 2-27-17.ods" "CS and EE 4 Year as of 10-24-16.ods" "CS and EE 4 Year as of 1-20-16.xlsx" "Computer Science Scholarship.docx" "CMSC Department Change Questions.odt" "Clubs/" "Book Loans.ods" "AMOR/" "Address.txt" "4 Year/" "2016_2017_FourYearPlan_Foundation.xlsx" "2015-16 Engineering Scholarships.pdf" ".~lock.CS and EE 4 Year as of 4-2-16.xlsx#" "JJR Leadership Scholarships.docx" "CS and EE 4 Year as of 3-31-16.xlsx" "../" "./")
+
+ ("/home/jason/Documents/School/" (21642 16970 0 0) "~$A Style Report (6th Ed.).dotx" "Spanish/" "Physics/" "PE/" "LEAD/" "English Comp/" "College/" "Calculus/" "Biblical Perspectives/" "AP English/" "../" "./")
+
+ ("/home/jason/.emacs.d/lisp/" (22729 39218 211353 125000) "../" "window-number.el" "themes/" "window-number" "./")
+
+ ("/home/jason/Documents/Emacs/readline/examples/" (22728 47119 920059 200000) "rlwrap-0.30.tar.gz" "rlversion.c" "rltest.c" "rlptytest.c" "rlfe/" "rlevent.c" "rlcat.c" "rlbasic.c" "rl.c" "rl-fgets.c" "rl-callbacktest.c" "readlinebuf.h" "manexamp.c" "Makefile.in" "Makefile" "Inputrc" "hist_purgecmd.c" "hist_erasedups.c" "histexamp.c" "fileman.c" "excallback.c" "autoconf/" "#rl.c#" "../" "./")
+
+ ("/home/jason/Documents/Emacs/readline/" (22728 45287 69671 600000) "xmalloc.o" "xmalloc.h" "xmalloc.c" "xfree.o" "xfree.c" "vi_mode.o" "vi_mode.c" "vi_keymap.c" "util.o" "util.c" "USAGE" "undo.o" "undo.c" "tilde.o" "tilde.h" "tilde.c" "text.o" "text.c" "terminal.o" "terminal.c" "tcap.h" "support/" "stamp-h" "signals.o" "signals.c" "shlib/" "shell.o" "shell.c" "search.o" "search.c" "savestring.c" "rlwinsize.h" "rltypedefs.h" "rltty.o" "rltty.c" "rlstdc.h" "rlshell.h" "rlprivate.h" "rlmbutil.h" "rldefs.h" "rlconf.h" "README" "readline.pc.in" "readline.pc" "readline.o" "readline.h" "readline.c" "posixstat.h" "posixselect.h" "posixjmp.h" "posixdir.h" "patchlevel" "parse-colors.o" "parse-colors.h" "parse-colors.c" "parens.o" "parens.c" "nls.o" "NEWS" "misc.o" "misc.c" "mbutil.o" "mbutil.c" "MANIFEST" "Makefile.in" "Makefile" "macro.o" "macro.c" "libreadline.a" "libhistory.a" "kill.o" "kill.c" "keymaps.o" "keymaps.h" "keymaps.c" "isearch.o" "isearch.c" "INSTALL" "input.o" "input.c" "histsearch.o" "histsearch.c" "history.o" "history.h" "history.c" "histlib.h" "histfile.o" "histfile.c" "histexpand.o" "histexpand.c" "funmap.o" "funmap.c" "emacs_keymap.c" "doc/" "display.o" "display.c" "COPYING" "configure.ac" "configure" "config.status" "config.log" "config.h.in" "config.h" "complete.o" "complete.c" "compat.o" "compat.c" "colors.o" "colors.h" "colors.c" "chardefs.h" "CHANGES" "CHANGELOG" "callback.o" "callback.c" "bind.o" "bind.c" "ansi_stdlib.h" "aclocal.m4" ".git/" "rltty.h" "nls.c" "examples/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
