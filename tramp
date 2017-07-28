@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <17/07/25 07:16:01 /home/jason/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <17/07/27 19:35:47 /home/jason/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -65,8 +65,6 @@
   ("ls" "/usr/bin/ls --color=never")
   ("ls-dired" t)
   ("gid-integer" 1008))
- (["ssh" "jsnvndrw" "beaker" nil nil]
-  nil)
  (["sudo" "root" "localhost" nil nil]
   ("locale" "LC_ALL=en_US.utf8")
   ("uname" "Linux 4.4.0-83-generic")
@@ -103,4 +101,26 @@
   ("perl-cwd-realpath" t)
   ("perl" "\\perl")
   ("readlink" "\\readlink")
-  ("gid-integer" 1000)))
+  ("gid-integer" 1000))
+ (["ssh" "jsnvndrw" "beaker" nil nil]
+  ("locale" "LC_ALL=en_US.utf8")
+  ("uname" "Linux 3.10.0-514.21.1.el7.x86_64")
+  ("test" "test")
+  ("remote-path"
+   ("/usr/bin" "/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("file-exists" "test -e")
+  ("stat" "\\stat")
+  ("ls" "/usr/bin/ls --color=never")
+  ("id" "/usr/bin/id")
+  ("uid-integer" 1019)
+  ("gid-integer" 1008)
+  ("readlink" "\\readlink")
+  ("gid-string" "TintleGroup")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("tmpdir" "/ssh:jsnvndrw@beaker:/tmp")
+  ("~" "/home/jsnvndrw"))
+ (["ssh" "jsnvdrw" "beaker" nil nil]
+  nil))

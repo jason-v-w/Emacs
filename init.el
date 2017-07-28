@@ -98,6 +98,24 @@
         (set-window-hscroll (selected-window)
                             (- cur mid)))))
 
+(defun my-window-number-select (number)
+  "Faster way to select windows using home row."
+  (interactive "cEnter Char: ")
+  (cond ((char-equal ?j number) (setq number 1))
+        ((char-equal ?k number) (setq number 2))
+        ((char-equal ?l number) (setq number 3))
+        ((char-equal ?\; number) (setq number 4))
+        ((char-equal ?a number) (setq number 5))
+        ((char-equal ?s number) (setq number 6))
+        ((char-equal ?d number) (setq number 7))
+        ((char-equal ?f number) (setq number 8))
+        ((char-equal ?g number) (setq number 9))
+        ((char-equal ?h number) (setq number 0))
+        (t (setq number (string-to-number (char-to-string number)))))
+  (window-number-select number))
+
+(global-set-key (kbd "C-x j") 'my-window-number-select)
+
 (load-theme `wombat)
 ;;(menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -263,6 +281,8 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 (global-set-key (kbd "C-z") 'jump-to-register)
+(global-set-key (kbd "C-M-z") 'window-configuration-to-register)
+(global-set-key (kbd "C-S-z") 'point-to-register)
 
 (define-key global-map (kbd "<S-iso-lefttab>") 'origami-forward-toggle-node)
 

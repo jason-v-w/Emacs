@@ -27,4 +27,5 @@
 	jump-to-register
 	org-cycle
 	org-self-insert-command
+	repeat
 	))

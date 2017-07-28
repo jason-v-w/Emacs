@@ -83,6 +83,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/R-LB-Impute/LaByRInth/"
  "/home/jason/.emacs.d/"
  "/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/GAW/post_conference/permutation_group/"
  "/jsnvndrw@beaker:/home/jsnvndrw/MyWD/GAW/post_conference/permutation_group/"
@@ -132,11 +133,11 @@
  "/home/jason/Documents/School/College/Spring Junior/CMSC 340/n_body/fixer/"
  "/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/3040/mem_sim/"
  "/scp:jsnvndrw@beaker.dordt.edu:/home/jsnvndrw/3040/emacs_fun/"
- "/jsnvndrw@beaker.dordt.edu:3040/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "functions.R"
  "init.el"
  "init.org"
  "stage_1_utilities.R"
@@ -144,28 +145,29 @@
  "post_paper_table.org"
  "text.txt"
  "10.0.39.13"
- "functions.R"
  ".emacs"
  ".emacs.orig"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/jason/Documents/stats/ks_imputation/LB-Impute/SourceCode/LB-Impute/src/imputation/" (22903 35788 403822 908000) "#Impute.java#" "ParseDistances.java" "../" "#ImputeOffspring.java#" "ImputeOffspring.java" "FindSampleColumns.java" "FindPath2.java" "Impute.java" "ImputeParents.java" "GetVariantNames.java" "RemoveValues.java" "CollapseValuesOffspring.java" "./" "ImputeMain.java" "Compare.java")
+
+ ("/home/jason/Documents/stats/ks_imputation/" (22906 14712 628175 525000) "LaByRInth_Wed-Jul-26-19-45-37-2017_.vcf" "LakinFuller_001.vcf" "../" ".git/" "R-LB-Impute/" "LaByRInth_Thu-Jul-27-13-54-05-2017_.vcf" "LB-Impute-notes.html" "LaByRInth_Wed-Jul-26-19-01-07-2017_.vcf" "LaByRInth_Wed-Jul-26-18-32-24-2017_.vcf" "LaByRInth_Wed-Jul-26-19-39-34-2017_.vcf" "LaByRInth_Wed-Jul-26-19-30-28-2017_.vcf" "LakinFuller_002.vcf.csv" "LaByRInth_Wed-Jul-26-18-23-37-2017_.vcf" "LakinFuller_004.vcf~" "LakinFuller_002.csv" "LaByRInth_Wed-Jul-26-18-30-32-2017_.vcf" "tpg-7-3-plantgenome2014.05.0023.pdf" "LakinFuller_001.vcf~" "LaByRInth_Wed-Jul-26-19-21-43-2017_.vcf" "LaByRInth_Wed-Jul-26-18-18-48-2017_.vcf" "LB-Impute/" "LaByRInth_Wed-Jul-26-18-34-50-2017_.vcf" "319.full.pdf" "org/" "LakinFuller_004.vcf" "LaByRInth_Wed-Jul-26-19-17-27-2017_.vcf" "LaByRInth_Wed-Jul-26-18-26-02-2017_.vcf" "LB-impute.pdf" "LaByRInth_Wed-Jul-26-18-21-23-2017_.vcf" "LaByRInth_Wed-Jul-26-19-20-25-2017_.vcf" "./" "LaByRInth_Wed-Jul-26-19-18-38-2017_.vcf" "LaByRInth_Wed-Jul-26-19-05-41-2017_.vcf" "LaByRInth_Wed-Jul-26-18-19-31-2017_.vcf" "LakinFuller_GBSv2_20170509.vcf" ".~lock.LakinFuller_004.vcf.csv#" "LaByRInth_Wed-Jul-26-19-15-39-2017_.vcf" "tassel-practice/" "LB-Impute-notes.html~" "LB-Impute-notes.org~" "LB-Impute-notes.org" "#LakinFuller_004.vcf#" "LaByRInth_Wed-Jul-26-19-16-24-2017_.vcf")
+
+ ("/home/jason/Documents/" (22903 13905 83243 220000) "recipes/" "../" "stats/" ".Rhistory" "math/" "temp.py" "emacs" "temp2.el" "temp2.org" "temp.org" "bookmarks_7_13_17.html" "temp2.org~" "recipes.zip" "practice.el" "./" "temp.el" "practice.el~" "temp.org~")
+
+ ("/home/jason/" (22906 31080 465062 261000) ".Xauthority" ".emacs~" ".mozilla/" "../" ".bash_logout" ".emacs.d/" ".dmrc" ".sudo_as_admin_successful" ".install4j" ".Rhistory" ".wget-hsts" "Music/" ".ssh/" "Pictures/" "examples.desktop" "Downloads/" ".pki/" ".thunderbird/" "Public/" ".nano/" ".xsession-errors.old" "tempfundamental" "Documents/" "R/" "TASSEL5/" "Dropbox/" ".emacs.back" ".lesshst" ".local/" "Videos/" ".dropbox-dist/" ".#tempfundamental" ".gnupg/" ".dropbox/" ".bash_aliases.swp" ".cache/" ".config/" ".oracle_jre_usage/" "#tempfundamental#" "Desktop/" ".emacs.orig" ".kde/" "nohup.out" ".emacs" ".bash_aliases~" ".gconf/" ".emacs.back~" ".ICEauthority" "./" ".bashrc" ".profile" ".dbus/" "tempfundamental~" "Templates/" ".java/" ".xsession-errors" "texput.log" ".gnome/" ".bash_aliases" ".gitconfig" ".bash_history")
+
+ ("/home/jason/Documents/stats/ks_imputation/R-LB-Impute/" (22905 63314 603617 221000) "GetVariantNames.R~" "../" "functions.R~" "unit_tests.R~" "unit_tests.R" "README~" ".git/" ".Rhistory" "scratch.R" "README" "Impute.R" "GetVariantNames.R" ".gitignore" "scratch.R~" "ImputeMain.R~" "Impute.R~" "ImputeOffspring.R" "ImputeOffspring.R~" "functions.R" "./" "testout.vcf" "ImputeMain.R")
+
+ ("/home/jason/.emacs.d/" (22905 62901 527938 404000) ".mc-lists.el" "themes/" "#init.el#" "../" ".git/" "init.css" "ido.last" "init.el" "elpa/" "games/" "lisp/" "init.html" "scratch/" "init.org~" "ac-comphist.dat" "README" "init.org" ".gitignore" "auto-save-list/" "url/" "tramp" "init.el~" ".emacs" "session.10c560f23b587d38ce149384433121782300000023790059" "./" "snippets/" "session.103ee994351e83d11714896334812770300000071780051" "abbrev_defs" "ido.last~" "init.html~")
+
+ ("/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/R-LB-Impute/LaByRInth/" (ftp . 417000.0413888889) "./" "../" ".git/" ".gitignore" "README" "scratch.R" "unit_tests.R" ".Rhistory" "functions.R" "#_assh_bjsnvndrw@beaker_b_ahome_ajsnvndrw_aMyWD_aR-LB-Impute_aLaByRInth_aunit__tests.R#")
+
  ("/home/jason/.emacs.d/scratch/" (22903 48091 727066 692000) "../" "#2017_07_25.el#" ".#2017_07_25.el" "./")
 
- ("/home/jason/.emacs.d/" (22903 47432 908060 343000) ".mc-lists.el" "themes/" "../" ".git/" "init.css" "ido.last" "init.el" "elpa/" "games/" "lisp/" "init.html" "init.org~" "ac-comphist.dat" "init.org" "auto-save-list/" "url/" "tramp" "init.el~" ".emacs" "session.10c560f23b587d38ce149384433121782300000023790059" "./" "snippets/" "session.103ee994351e83d11714896334812770300000071780051" "abbrev_defs" "ido.last~" "init.html~")
-
- ("/home/jason/" (22903 47231 465585 497000) ".Xauthority" ".emacs~" ".mozilla/" "../" ".bash_logout" ".emacs.d/" ".dmrc" ".sudo_as_admin_successful" ".install4j" ".Rhistory" ".wget-hsts" "Music/" ".ssh/" "Pictures/" "examples.desktop" "Downloads/" ".pki/" ".thunderbird/" "Public/" ".nano/" ".xsession-errors.old" "tempfundamental" "Documents/" "R/" "TASSEL5/" "Dropbox/" ".emacs.back" ".lesshst" ".local/" "Videos/" ".dropbox-dist/" ".#tempfundamental" ".gnupg/" ".dropbox/" ".bash_aliases.swp" ".cache/" ".config/" ".oracle_jre_usage/" "#tempfundamental#" "Desktop/" ".emacs.orig" ".kde/" "nohup.out" ".emacs" ".bash_aliases~" ".gconf/" ".emacs.back~" ".ICEauthority" "./" ".bashrc" ".profile" ".dbus/" "tempfundamental~" "Templates/" ".java/" ".xsession-errors" "texput.log" ".gnome/" ".bash_aliases" ".gitconfig" ".bash_history")
-
- ("/home/jason/Documents/stats/ks_imputation/R-LB-Impute/" (22894 27028 630981 438000) "GetVariantNames.R~" "../" "functions.R~" "unit_tests.R~" "unit_tests.R" "README~" ".git/" "README" "Impute.R" "GetVariantNames.R" ".gitignore" "ImputeMain.R~" "temp.R~" "Impute.R~" "ImputeOffspring.R" "ImputeOffspring.R~" "functions.R" "./" "testout.vcf" "temp.R" "ImputeMain.R")
-
- ("/home/jason/Documents/" (22894 45015 998610 690000) "recipes/" "../" "stats/" ".Rhistory" "math/" "temp2.el" "temp2.org" "temp.org" "bookmarks_7_13_17.html" "temp2.org~" "recipes.zip" "./" "temp.el" "temp.org~")
-
  ("/home/jason/Documents/stats/" (22889 35330 800218 366000) ".~lock.IterationsConfidence.ods#" "../" "R-package-notes.org" "methods_overview.aux" "notes_2017_5_30.pdf" "ks_imputation/" "#test.R#" "gaw/" "methods_overview.pdf" "IterationsConfidence.ods" "test.R" "methods_overview.tex~" "notes_2017_5_30.odt" "methods_overview.tex" "./" "tex/" "R-package-notes.org~" "methods_overview.log" "methods_overview.out")
-
- ("/home/jason/Documents/stats/ks_imputation/LB-Impute/SourceCode/LB-Impute/src/imputation/" (22889 3303 154071 950000) "#Impute.java#" "ParseDistances.java" "../" "#ImputeOffspring.java#" "ImputeOffspring.java" "FindSampleColumns.java" "FindPath2.java" "Impute.java" "ImputeParents.java" "GetVariantNames.java" "RemoveValues.java" "CollapseValuesOffspring.java" ".#Impute.java" "./" ".#ImputeOffspring.java" "ImputeMain.java" "Compare.java")
-
- ("/home/jason/Documents/stats/ks_imputation/" (22893 65163 545728 999000) "../" ".git/" "R-LB-Impute/" "LB-Impute-notes.html" "tpg-7-3-plantgenome2014.05.0023.pdf" "LB-Impute/" "319.full.pdf" "org/" "LB-impute.pdf" "./" "LakinFuller_GBSv2_20170509.vcf" "tassel-practice/" "LB-Impute-notes.html~" "LB-Impute-notes.org~" "LB-Impute-notes.org")
 
  ("/etc/systemd/" (22885 3282 595458 933000) "bootchart.conf" "user/" "../" "system/" "system.conf" "network/" "user.conf" "logind.conf" "timesyncd.conf" "resolved.conf" "./" "journald.conf" "logind.conf~")
 
