@@ -163,8 +163,6 @@
 
  ("/home/jason/.emacs.d/" (22905 62901 527938 404000) ".mc-lists.el" "themes/" "#init.el#" "../" ".git/" "init.css" "ido.last" "init.el" "elpa/" "games/" "lisp/" "init.html" "scratch/" "init.org~" "ac-comphist.dat" "README" "init.org" ".gitignore" "auto-save-list/" "url/" "tramp" "init.el~" ".emacs" "session.10c560f23b587d38ce149384433121782300000023790059" "./" "snippets/" "session.103ee994351e83d11714896334812770300000071780051" "abbrev_defs" "ido.last~" "init.html~")
 
- ("/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/R-LB-Impute/LaByRInth/" (ftp . 417000.0413888889) "./" "../" ".git/" ".gitignore" "README" "scratch.R" "unit_tests.R" ".Rhistory" "functions.R" "#_assh_bjsnvndrw@beaker_b_ahome_ajsnvndrw_aMyWD_aR-LB-Impute_aLaByRInth_aunit__tests.R#")
-
  ("/home/jason/.emacs.d/scratch/" (22903 48091 727066 692000) "../" "#2017_07_25.el#" ".#2017_07_25.el" "./")
 
  ("/home/jason/Documents/stats/" (22889 35330 800218 366000) ".~lock.IterationsConfidence.ods#" "../" "R-package-notes.org" "methods_overview.aux" "notes_2017_5_30.pdf" "ks_imputation/" "#test.R#" "gaw/" "methods_overview.pdf" "IterationsConfidence.ods" "test.R" "methods_overview.tex~" "notes_2017_5_30.odt" "methods_overview.tex" "./" "tex/" "R-package-notes.org~" "methods_overview.log" "methods_overview.out")

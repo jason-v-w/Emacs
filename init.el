@@ -116,6 +116,26 @@
 
 (global-set-key (kbd "C-x j") 'my-window-number-select)
 
+(defun my-setup ()
+  (interactive)
+  (find-file "/")
+  (find-file "/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/R-LB-Impute/LaByRInth/functions.R")
+;;   (R)
+;;   (delete-other-windows)
+;;   (find-file "/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/R-LB-Impute/LaByRInth/functions.R")
+;;   (call-interactively 'origami-close-all-nodes)
+;; ;;  (sleep-for 1)
+;; ;;  (call-interactively (key-binding (kbd "RET")))
+;;   (split-window-horizontally)
+;;   (other-window 1)
+;;   (find-file "/ssh:jsnvndrw@beaker:/home/jsnvndrw/MyWD/R-LB-Impute/LaByRInth/unit_tests.R")
+;;   (split-window-vertically)
+;;   (other-window 1)
+;;   (switch-to-buffer "*R*")
+;;   (ess-change-directory "/home/jsnvndrw/MyWD/R-LB-Impute/LaByRInth/")
+  
+  nil)
+
 (load-theme `wombat)
 ;;(menu-bar-mode -1)
 (tool-bar-mode -1)
