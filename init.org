@@ -184,13 +184,14 @@ Add a faster binding the window-number so I can use home row keys.
 
 * General Settings
 #+BEGIN_SRC emacs-lisp
-  (load-theme `wombat)
+  ;; (load-theme `wombat)
+  (load-theme `adwaita)
   ;;(menu-bar-mode -1)
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
   (setq frame-title-format "Emacs")
   (setq inhibit-splash-screen t)
-  (transparency 85)
+  (transparency 95)
 #+END_SRC
   
 * Preinstalled
@@ -304,7 +305,6 @@ Add Repositories
 #+END_SRC
 
 ** Melpa
-
 *** Multiple Cursors
 #+BEGIN_SRC emacs-lisp
   (require 'multiple-cursors)
@@ -366,6 +366,45 @@ Add Repositories
 (add-to-list 'origami-parser-alist '(ess-mode . origami-c-style-parser))
 (define-key origami-mode-map (kbd "C-c j") 'origami-forward-toggle-node)
 (global-origami-mode 1)
+#+END_SRC
+
+*** Rainbow Delimiters
+#+BEGIN_SRC emacs-lisp
+  (require 'rainbow-delimiters)
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+  (add-hook 'ess-mode-hook 'rainbow-delimiters-mode)
+#+END_SRC
+
+*** Rainbow Identifiers
+#+BEGIN_SRC emacs-lisp
+  (require 'rainbow-identifiers)
+  ;; (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
+  ;; (add-hook 'ess-mode-hook 'rainbow-identifiers-mode)
+#+END_SRC
+
+*** Projectile
+#+BEGIN_SRC emacs-lisp
+  (require 'projectile)
+  (add-hook 'prog-mode-hook 'projectile-mode)
+  (add-hook 'ess-mode-hook 'projectile-mode)
+#+END_SRC
+
+*** Helm Projectile
+#+BEGIN_SRC emacs-lisp
+  (setq helm-projectile-fuzzy-match t)
+  (require 'helm-projectile)
+  (helm-projectile-on)
+#+END_SRC
+
+*** Powerline
+#+BEGIN_SRC emacs-lisp
+  ;; (require 'powerline)
+  ;; (powerline-default-theme)
+#+END_SRC
+
+*** Git Timemachine
+#+BEGIN_SRC emacs-lisp
+  (require 'git-timemachine)
 #+END_SRC
 
 ** Manual
@@ -453,6 +492,7 @@ Add Repositories
 #+END_SRC
 
 ** Helm
+
 Code from [[http://tuhdo.github.io/helm-intro.html]] trying to mimick spacemacs
 #+BEGIN_SRC emacs-lisp
   (require 'helm)
@@ -492,18 +532,52 @@ Code from [[http://tuhdo.github.io/helm-intro.html]] trying to mimick spacemacs
   (add-hook 'helm-minibuffer-set-up-hook
             'spacemacs//helm-hide-minibuffer-maybe)
 
+  ;; Allow helm to automatically size the buffer to fit the content
+  (helm-autoresize-mode t)
+  ;; Numbers are percentages but I don't understand the 0
   (setq helm-autoresize-max-height 0)
-  (setq helm-autoresize-min-height 20)
-  (helm-autoresize-mode 1)
+  (setq helm-autoresize-min-height 40)
+
 
   (helm-mode 1)
+  (ace-jump-helm-line-autoshow-mode)
+  (setq ace-jump-helm-line-autoshow-use-linum t)
+  (setq ace-jump-helm-line-default-action 'select)
+  (setq ace-jump-helm-line-select-key ?e) ;; this line is not needed
+  ;; Set the move-only and persistent keys
+  (setq ace-jump-helm-line-move-only-key ?o)
+  (setq ace-jump-helm-line-persistent-key ?p)
+
+  ;; Use helm-M-x instead of M-x
+  (global-set-key (kbd "M-x") 'helm-M-x)
+  (setq helm-M-x-fuzzy-match t) ;; optional fuzzy matching for helm-M-x
+
+  (global-set-key (kbd "C-x b") 'helm-mini)
+  (setq helm-buffers-fuzzy-matching t
+        helm-recentf-fuzzy-match t)
+
+  (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
+  (require 'helm-swoop)
+  (global-set-key (kbd "C-S-s") 'helm-swoop)
+
+  (require 'ace-jump-helm-line)
+  (eval-after-load "helm"
+    '(define-key helm-map (kbd "M-;") 'ace-jump-helm-line))
+
+  ;; Code from [[https://www.reddit.com/r/emacs/comments/345vtl/make_helm_window_at_the_bottom_without_using_any/][emacs reddit]]
+  (add-to-list 'display-buffer-alist
+               `(,(rx bos "*helm" (* not-newline) "*" eos)
+                 (display-buffer-in-side-window)
+                 (inhibit-same-window . t)
+                 (window-height . 0.4)))
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-x b") 'helm-buffers-list)
   (global-set-key (kbd "C-x C-f") 'helm-find-files)
 #+END_SRC
-
+p
 ** Register Jump
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-z") 'jump-to-register)
@@ -519,6 +593,14 @@ Code from [[http://tuhdo.github.io/helm-intro.html]] trying to mimick spacemacs
 ** Horizontal Centering
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-S-l") 'my-horizontal-recenter)
+#+END_SRC
+
+** Other
+#+BEGIN_SRC emacs-lisp
+  ;; This should be updated to allow for things such as 
+  ;;   M-m f for find files
+  ;;   M-m b for switch buffers
+  (global-set-key (kbd "M-m") (lookup-key global-map (kbd "C-x")))
 #+END_SRC
 
 * Final Calls
@@ -564,4 +646,10 @@ This segment inspired by this [[https://www.youtube.com/watch?v%3DHTUE03LnaXA][Y
 #+END_QUOTE
 ** Tips
 - M-h (org-mark-element)
-- M-= (count-words-region START END &optional ARG)
+- M-= (count-words-region START END &optional ARG
+
+* TODO
+- git timemachine (and view by commit time)
+- compile rainbow-delimiters
+- commit to github
+- add M-m stuff or maybe M-SPC stuff and shoot for spacemacs style
