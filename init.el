@@ -137,7 +137,11 @@
   nil)
 
 ;; (load-theme `wombat)
-(load-theme `adwaita)
+;; (load-theme `adwaita)
+;; (require 'spacemacs-theme)
+;; (load-theme `spacemacs-dark)
+;; (unless (package-installed-p 'spacemacs-theme) (package-install 'spacemacs-theme))
+;; (load-theme 'spacemacs-dark t)
 ;;(menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -256,9 +260,71 @@
 (add-hook 'prog-mode-hook 'projectile-mode)
 (add-hook 'ess-mode-hook 'projectile-mode)
 
+(require 'helm)
+(require 'helm-config)
+(helm-mode 1)
+
+(when (executable-find "curl")
+  (setq helm-google-suggest-use-curl-p t))
+
+(setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
+      helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
+      helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
+      helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
+      helm-ff-file-name-history-use-recentf t
+      helm-echo-input-in-header-line t)
+
+(defun spacemacs//helm-hide-minibuffer-maybe ()
+  "Hide minibuffer in Helm session if we use the header line as input field."
+  (when (with-helm-buffer helm-echo-input-in-header-line)
+    (let ((ov (make-overlay (point-min) (point-max) nil nil t)))
+      (overlay-put ov 'window (selected-window))
+      (overlay-put ov 'face
+                   (let ((bg-color (face-background 'default nil)))
+                     `(:background ,bg-color :foreground ,bg-color)))
+      (setq-local cursor-type nil))))
+
+
+(add-hook 'helm-minibuffer-set-up-hook
+          'spacemacs//helm-hide-minibuffer-maybe)
+
+;; Code from [[https://www.reddit.com/r/emacs/comments/345vtl/make_helm_window_at_the_bottom_without_using_any/][emacs reddit]]
+(add-to-list 'display-buffer-alist
+             `(,(rx bos "*helm" (* not-newline) "*" eos)
+               (display-buffer-in-side-window)
+               (inhibit-same-window . t)
+               (window-height . 0.4)))
+
+;; Allow helm to automatically size the buffer to fit the content
+(helm-autoresize-mode t)
+;; Numbers are percentages but I don't understand the 0
+(setq helm-autoresize-max-height 0)
+(setq helm-autoresize-min-height 40)
+
+(require 'ace-jump-helm-line)
+(eval-after-load "helm"
+  '(define-key helm-map (kbd "M-;") 'ace-jump-helm-line))
+
+;; (ace-jump-helm-line-autoshow-mode)
+;; (setq ace-jump-helm-line-autoshow-use-linum t)
+(setq ace-jump-helm-line-default-action 'select)
+(setq ace-jump-helm-line-select-key ?e) ;; this line is not needed
+;; Set the move-only and persistent keys (these don't seem to work)
+(setq ace-jump-helm-line-move-only-key ?o)
+(setq ace-jump-helm-line-persistent-key ?p)
+
+(require 'helm-swoop)
+(global-set-key (kbd "C-S-s") 'helm-swoop)
+
 (setq helm-projectile-fuzzy-match t)
 (require 'helm-projectile)
 (helm-projectile-on)
+
+(global-set-key (kbd "M-x") 'helm-M-x)
+(setq helm-M-x-fuzzy-match t) ;; optional fuzzy matching for helm-M-x
+
+(setq helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match t)
 
 ;; (require 'powerline)
 ;; (powerline-default-theme)
@@ -319,78 +385,21 @@
 (global-set-key (kbd "<kp-add>") 'evil-numbers/inc-at-pt)
 (global-set-key (kbd "<kp-subtract>") 'evil-numbers/dec-at-pt)
 
-(require 'helm)
-    (require 'helm-config)
+;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
+;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
+;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
+(global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-unset-key (kbd "C-x c"))
 
-    ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
-    ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
-    ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
-    (global-set-key (kbd "C-c h") 'helm-command-prefix)
-    (global-unset-key (kbd "C-x c"))
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
+(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB work in terminal
+(define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
-    (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
-    (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB work in terminal
-    (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
-
-    (when (executable-find "curl")
-      (setq helm-google-suggest-use-curl-p t))
-
-    (setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
-          helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
-          helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
-          helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
-          helm-ff-file-name-history-use-recentf t
-          helm-echo-input-in-header-line t)
-
-    (defun spacemacs//helm-hide-minibuffer-maybe ()
-      "Hide minibuffer in Helm session if we use the header line as input field."
-      (when (with-helm-buffer helm-echo-input-in-header-line)
-        (let ((ov (make-overlay (point-min) (point-max) nil nil t)))
-          (overlay-put ov 'window (selected-window))
-          (overlay-put ov 'face
-                       (let ((bg-color (face-background 'default nil)))
-                         `(:background ,bg-color :foreground ,bg-color)))
-          (setq-local cursor-type nil))))
-
-
-    (add-hook 'helm-minibuffer-set-up-hook
-              'spacemacs//helm-hide-minibuffer-maybe)
-
-    ;; Allow helm to automatically size the buffer to fit the content
-    (helm-autoresize-mode t)
-    ;; Numbers are percentages but I don't understand the 0
-    (setq helm-autoresize-max-height 0)
-    (setq helm-autoresize-min-height 40)
-
-
-    (helm-mode 1)
-
-  ;; Use helm-M-x instead of M-x
-  (global-set-key (kbd "M-x") 'helm-M-x)
-  (setq helm-M-x-fuzzy-match t) ;; optional fuzzy matching for helm-M-x
-
-  (global-set-key (kbd "C-x b") 'helm-mini)
-  (setq helm-buffers-fuzzy-matching t
-      helm-recentf-fuzzy-match t)
-
-  (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-
-  (require 'helm-swoop)
-  (global-set-key (kbd "C-S-s") 'helm-swoop)
-
-  (require 'ace-jump-helm-line)
-  (eval-after-load "helm"
-    '(define-key helm-map (kbd "M-;") 'ace-jump-helm-line))
-
-;; Code from [[https://www.reddit.com/r/emacs/comments/345vtl/make_helm_window_at_the_bottom_without_using_any/][emacs reddit]]
-(add-to-list 'display-buffer-alist
-                    `(,(rx bos "*helm" (* not-newline) "*" eos)
-                         (display-buffer-in-side-window)
-                         (inhibit-same-window . t)
-                         (window-height . 0.4)))
-
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "M-x") 'helm-M-x)
+;; (global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
 (global-set-key (kbd "C-z") 'jump-to-register)
 (global-set-key (kbd "C-M-z") 'window-configuration-to-register)
@@ -403,8 +412,61 @@
 ;; This should be updated to allow for things such as 
 ;;   M-m f for find files
 ;;   M-m b for switch buffers
-(global-set-key (kbd "M-m") (lookup-key global-map (kbd "C-x")))
+;; (global-set-key (kbd "M-m") (lookup-key global-map (kbd "C-x")))
+;; (define-key key-translation-map (kbd "C-g") (kbd "M-g"))
+;; (let ((mg (lookup-key global-map (kbd "M-g"))) (cg (lookup-key global-map (kbd "C-g"))))
+;;   (global-set-key (kbd "M-g") cg)
+;;   (global-set-key (kbd "C-g") mg))
 
 (if (and (fboundp 'server-running-p) 
          (not (server-running-p)))
     (server-start))
+
+;; For some reason it doesn't work to load this with the other general settings
+(load-theme 'spacemacs-dark t)
+
+(defvar my-git-extras-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "T") 'git-timemachine)   ;; T for timemachine
+    (define-key map (kbd "t") 'smeargle)   ;; t for time of commit
+    (define-key map (kbd "a") 'smeargle-commit)    ;; a for age of commit
+    (define-key map (kbd "c") 'smeargle-clear)     ;; c for clear smeargle
+    map)
+  "Git fancy extra commands mapping")
+
+(defvar my-git-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "s") 'magit-status)
+    (define-key map (kbd "l") 'magit-log-all)
+    (define-key map (kbd "x") my-git-extras-map)
+    map)
+  "Git commands mapping")
+
+(defvar my-rapid-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "j") (lambda() (interactive) (window-number-select 1))) ;; window 1
+    (define-key map (kbd "k") (lambda() (interactive) (window-number-select 2))) ;; window 2
+    (define-key map (kbd "l") (lambda() (interactive) (window-number-select 3))) ;; window 3
+    (define-key map (kbd ";") (lambda() (interactive) (window-number-select 4))) ;; window 4
+    (define-key map (kbd "p") (lambda() (interactive) (other-window -1)))        ;; previous window
+    (define-key map (kbd "M-SPC") 'avy-goto-word-1)                              ;; ace jump
+    (define-key map (kbd "SPC")   'avy-goto-word-1)                              ;; ace jump
+    map)
+  "Rapid commands mapping")
+
+(defvar my-M-m-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "p") 'helm-projectile)
+    (define-key map (kbd "b") (lookup-key global-map (kbd "C-x b")))
+    (define-key map (kbd "f") (lookup-key global-map (kbd "C-x C-f")))
+    (define-key map (kbd "s") 'helm-swoop)
+    (define-key map (kbd "SPC") (lookup-key global-map (kbd "M-x")))
+    (define-key map (kbd "g") my-git-map)
+    map)
+  "M-m keymap.")
+
+(global-set-key (kbd "M-m") my-M-m-map)
+(global-set-key (kbd "M-SPC") my-rapid-map)
+
+(require 'powerline)
+(powerline-default-theme)

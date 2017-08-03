@@ -26,6 +26,7 @@
 	indent-for-tab-command
 	jump-to-register
 	org-cycle
+	org-edit-src-save
 	org-self-insert-command
 	repeat
 	))
