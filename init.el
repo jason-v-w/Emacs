@@ -148,9 +148,10 @@
 (setq frame-title-format "Emacs")
 (setq inhibit-splash-screen t)
 (transparency 95)
+(setq-default show-trailing-whitespace t)
 
-(add-to-list 'org-structure-template-alist
-             '("m" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC" "<src lang=\"?\">\n\n</src>"))
+;;  (add-to-list 'org-structure-template-alist
+;;               '("m" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC" "<src lang=\"?\">\n\n</src>"))
 
 (add-to-list 'org-drawers "FUTURE")
 (add-to-list 'org-drawers "META")
@@ -212,7 +213,9 @@
 
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
+             '("melpa" . "http://melpa.org/packages/")
+             '("elpy" . "https://jorgenschaefer.github.io/packages/")
+             )
 (package-initialize)
 
 (require 'multiple-cursors)
@@ -330,6 +333,8 @@
 ;; (powerline-default-theme)
 
 (require 'git-timemachine)
+
+(elpy-enable)
 
 (load "~/.emacs-Macaulay2" t)
 (global-set-key (kbd "C-c C-l") 'M2-send-to-program)

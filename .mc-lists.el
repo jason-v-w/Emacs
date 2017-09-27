@@ -12,6 +12,7 @@
 
 (setq mc/cmds-to-run-once
       '(
+	LaTeX-insert-left-brace
 	M2-electric-semi
 	M2-newline-and-indent
 	abort-recursive-edit
