@@ -1,4 +1,4 @@
-#+TITLE: Emacs Org Init File
+i#+TITLE: Emacs Org Init File
 #+AUTHOR: Jason Vander Woude
 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="init.css" />
@@ -181,6 +181,34 @@ Add a faster binding the window-number so I can use home row keys.
     nil)
 #+END_SRC
 
+** Theming
+#+BEGIN_SRC emacs-lisp
+  (defun my:load-light ()
+    "disable spacemacs-dark and enable spacemacs-light"
+    (interactive)
+    (disable-theme `spacemacs-dark)
+    (load-theme `spacemacs-light))
+
+  (defun my:load-dark ()
+    "disable spacemacs-dark and enable spacemacs-light"
+    (interactive)
+    (disable-theme `spacemacs-light)
+    (load-theme `spacemacs-dark))
+#+END_SRC
+
+** Smart Line Navigation
+#+BEGIN_SRC emacs-lisp
+  (defun my:smart-beginning-of-line-navigation ()
+    "Use Spacemacs style line navigation. Apparently this behavior
+  came from the mwim package available on MELPA"
+    (interactive)
+    (if (eq last-command 'my:smart-beginning-of-line-navigation)
+        (progn
+          (move-beginning-of-line nil)
+          (setq this-command 'move-beginning-of-line))
+      (back-to-indentation)))
+#+END_SRC
+
 * General Settings
 #+BEGIN_SRC emacs-lisp
   ;; (load-theme `wombat)
@@ -270,10 +298,57 @@ This source is influence by [[http://orgmode.org/worg/org-contrib/babel/examples
 *** Notetaking
 This source is influenced by [[http://sachachua.com/blog/2015/02/learn-take-notes-efficiently-org-mode/][this blogpost]] and [[http://sachachua.com/blog/2014/01/tips-learning-org-mode-emacs/][this one]]
 #+BEGIN_SRC emacs-lisp
-;; set "C-c o" to open "~/organizer.org"
-(global-set-key (kbd "C-c o")
-                (lambda () (interactive) (find-file "~/organizer.org")))
-(setq org-refile-targets '((org-agenda-files . (:maxlevel . 10))))
+    ;; set "C-c o" to open "~/organizer.org"
+    (setq org-directory "~/Documents/org")
+    (global-set-key (kbd "C-c o")
+                    (lambda () (interactive) (find-file (concat org-directory "/organizer.org"))))
+    (global-set-key (kbd "C-c a") 'org-agenda)
+    (setq org-refile-targets '((org-agenda-files . (:maxlevel . 10))))
+    (setq org-mobile-directory (concat org-directory "/mobile-org"))
+    (setq org-mobile-inbox-for-pull (concat org-directory "/mobile-org-pull"))
+    (setq org-default-notes-file (concat org-directory "/capture.org"))
+    (global-set-key (kbd "C-c c") 'org-capture)
+    ;; Compact the block agenda view
+    ;;(setq org-agenda-compact-blocks nil)
+    (setq org-todo-keywords
+          '((sequence "TODO(t)" "|" "DONE(d)")
+            (sequence "WAITING(w)" "|")
+            (sequence "IN PROGRESS(p)" "|")))
+    ;; Use a key to select todo-keyword instead of C-c C-t repeatedly
+    (setq org-use-fast-todo-selection t)
+    ;; Bundle all clock-in and clock-out info into a :LOGBOOK: drawer
+    (setq org-clock-into-drawer t)
+    ;; Prevent done items in agenda from being large
+
+    ;;(setq org-agenda-files '("~/Documents/org" "~/Documents/School/College/Fall Senior/EGR_379/Farmbot"))
+    ;; (add-hook 'org-mode-hook
+    ;;           '(lambda ()
+    ;;              ;; Undefine C-c [ and C-c ] since this breaks my
+    ;;              ;; org-agenda files when directories are include It
+    ;;              ;; expands the files in the directories individually
+    ;;              (org-defkey org-mode-map "\C-c[" 'undefined)
+    ;;              (org-defkey org-mode-map "\C-c]" 'undefined))
+    ;;             'append)
+    (add-hook 'after-init-hook
+              '(lambda () (progn
+                            (setq org-agenda-files '("~/Documents/org"
+                                                     "~/Documents/School/College/Fall Senior/EGR_379/Farmbot"))
+                            (set-face-attribute 'org-scheduled-today nil
+                                                :height 'unspecified)
+                            (set-face-attribute 'org-agenda-calendar-event nil
+                                                :slant 'oblique
+                                                :weight 'bold)
+                            (set-face-attribute 'org-agenda-done nil
+                                                :height 'unspecified)
+                            (set-face-attribute 'org-agenda-date nil
+                                                :box t)
+                            (set-face-attribute 'org-agenda-date-weekend nil
+                                                :box t)
+                            (set-face-attribute 'org-agenda-date-today nil
+                                                :box t)))
+               'append)
+    (setq org-startup-indented t)
+    (setq org-agenda-span 10)
 #+END_SRC
 
 ** Highlight Line
@@ -436,17 +511,17 @@ Add Repositories
             'spacemacs//helm-hide-minibuffer-maybe)
 
   ;; Code from [[https://www.reddit.com/r/emacs/comments/345vtl/make_helm_window_at_the_bottom_without_using_any/][emacs reddit]]
-  (add-to-list 'display-buffer-alist
-               `(,(rx bos "*helm" (* not-newline) "*" eos)
-                 (display-buffer-in-side-window)
-                 (inhibit-same-window . t)
-                 (window-height . 0.4)))
+  ;(add-to-list 'display-buffer-alist
+  ;             `(,(rx bos "*helm" (* not-newline) "*" eos)
+  ;               (display-buffer-in-side-window)
+  ;               (inhibit-same-window . t)
+  ;               (window-height . 0.4)))
 
   ;; Allow helm to automatically size the buffer to fit the content
-  (helm-autoresize-mode t)
+  ;(helm-autoresize-mode t)
   ;; Numbers are percentages but I don't understand the 0
-  (setq helm-autoresize-max-height 0)
-  (setq helm-autoresize-min-height 40)
+  ;(setq helm-autoresize-max-height 0)
+  ;(setq helm-autoresize-min-height 40)
 #+END_SRC
 
 **** Ace Jump Helm Line
@@ -509,7 +584,8 @@ Used for switching buffers and recent files
 
 *** Elpy
 #+BEGIN_SRC emacs-lisp
-  (elpy-enable)
+  ;; python IDE, autocomplete etc
+  ;; (elpy-enable)
 #+END_SRC
 
 *** M2
@@ -630,6 +706,16 @@ Code from [[http://tuhdo.github.io/helm-intro.html]] trying to mimick spacemacs
 ** Horizontal Centering
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-S-l") 'my-horizontal-recenter)
+#+END_SRC
+
+** Icicle
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-c i") 'icicle-recent-file)
+#+END_SRC
+
+** My Functions
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-a") 'my:smart-beginning-of-line-navigation)
 #+END_SRC
 
 ** Other
@@ -754,7 +840,3 @@ This segment inspired by this [[https://www.youtube.com/watch?v%3DHTUE03LnaXA][Y
 - compile rainbow-delimiters
 - commit to github
 - add M-m stuff or maybe M-SPC stuff and shoot for spacemacs style
-
-
-
-

@@ -136,6 +136,18 @@
   
   nil)
 
+(defun my:load-light ()
+  "disable spacemacs-dark and enable spacemacs-light"
+  (interactive)
+  (disable-theme `spacemacs-dark)
+  (load-theme `spacemacs-light))
+
+(defun my:load-dark ()
+  "disable spacemacs-dark and enable spacemacs-light"
+  (interactive)
+  (disable-theme `spacemacs-light)
+  (load-theme `spacemacs-dark))
+
 ;; (load-theme `wombat)
 ;; (load-theme `adwaita)
 ;; (require 'spacemacs-theme)
@@ -196,6 +208,58 @@
 ;;     ((t (:background "#F0F"))))
 ;;   (org-block-end-line
 ;;     ((t (:underline "#0F0" :foreground "#00F" :background "#F00"))))
+
+;; set "C-c o" to open "~/organizer.org"
+(setq org-directory "~/Documents/org")
+(global-set-key (kbd "C-c o")
+                (lambda () (interactive) (find-file (concat org-directory "/organizer.org"))))
+(global-set-key (kbd "C-c a") 'org-agenda)
+(setq org-refile-targets '((org-agenda-files . (:maxlevel . 10))))
+(setq org-mobile-directory (concat org-directory "/mobile-org"))
+(setq org-mobile-inbox-for-pull (concat org-directory "/mobile-org-pull"))
+(setq org-default-notes-file (concat org-directory "/capture.org"))
+(global-set-key (kbd "C-c c") 'org-capture)
+;; Compact the block agenda view
+;;(setq org-agenda-compact-blocks nil)
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "|" "DONE(d)")
+        (sequence "WAITING(w)" "|")
+        (sequence "IN PROGRESS(p)" "|")))
+;; Use a key to select todo-keyword instead of C-c C-t repeatedly
+(setq org-use-fast-todo-selection t)
+;; Bundle all clock-in and clock-out info into a :LOGBOOK: drawer
+(setq org-clock-into-drawer t)
+;; Prevent done items in agenda from being large
+
+;;(setq org-agenda-files '("~/Documents/org" "~/Documents/School/College/Fall Senior/EGR_379/Farmbot"))
+;; (add-hook 'org-mode-hook
+;;           '(lambda ()
+;;              ;; Undefine C-c [ and C-c ] since this breaks my
+;;              ;; org-agenda files when directories are include It
+;;              ;; expands the files in the directories individually
+;;              (org-defkey org-mode-map "\C-c[" 'undefined)
+;;              (org-defkey org-mode-map "\C-c]" 'undefined))
+;;             'append)
+(add-hook 'after-init-hook
+          '(lambda () (progn
+                        (setq org-agenda-files '("~/Documents/org"
+                                                 "~/Documents/School/College/Fall Senior/EGR_379/Farmbot"))
+                        (set-face-attribute 'org-scheduled-today nil
+                                            :height 'unspecified)
+                        (set-face-attribute 'org-agenda-calendar-event nil
+                                            :slant 'oblique
+                                            :weight 'bold)
+                        (set-face-attribute 'org-agenda-done nil
+                                            :height 'unspecified)
+                        (set-face-attribute 'org-agenda-date nil
+                                            :box t)
+                        (set-face-attribute 'org-agenda-date-weekend nil
+                                            :box t)
+                        (set-face-attribute 'org-agenda-date-today nil
+                                            :box t)))
+           'append)
+(setq org-startup-indented t)
+(setq org-agenda-span 10)
 
 (global-hl-line-mode 1)
 (set-face-underline 'hl-line nil)
@@ -292,17 +356,17 @@
           'spacemacs//helm-hide-minibuffer-maybe)
 
 ;; Code from [[https://www.reddit.com/r/emacs/comments/345vtl/make_helm_window_at_the_bottom_without_using_any/][emacs reddit]]
-(add-to-list 'display-buffer-alist
-             `(,(rx bos "*helm" (* not-newline) "*" eos)
-               (display-buffer-in-side-window)
-               (inhibit-same-window . t)
-               (window-height . 0.4)))
+;(add-to-list 'display-buffer-alist
+;             `(,(rx bos "*helm" (* not-newline) "*" eos)
+;               (display-buffer-in-side-window)
+;               (inhibit-same-window . t)
+;               (window-height . 0.4)))
 
 ;; Allow helm to automatically size the buffer to fit the content
-(helm-autoresize-mode t)
+;(helm-autoresize-mode t)
 ;; Numbers are percentages but I don't understand the 0
-(setq helm-autoresize-max-height 0)
-(setq helm-autoresize-min-height 40)
+;(setq helm-autoresize-max-height 0)
+;(setq helm-autoresize-min-height 40)
 
 (require 'ace-jump-helm-line)
 (eval-after-load "helm"
@@ -334,7 +398,8 @@
 
 (require 'git-timemachine)
 
-(elpy-enable)
+;; python IDE, autocomplete etc
+;; (elpy-enable)
 
 (load "~/.emacs-Macaulay2" t)
 (global-set-key (kbd "C-c C-l") 'M2-send-to-program)
@@ -413,6 +478,8 @@
 (define-key global-map (kbd "<S-iso-lefttab>") 'origami-forward-toggle-node)
 
 (global-set-key (kbd "C-S-l") 'my-horizontal-recenter)
+
+(global-set-key (kbd "C-c i") 'icicle-recent-file)
 
 ;; This should be updated to allow for things such as 
 ;;   M-m f for find files
